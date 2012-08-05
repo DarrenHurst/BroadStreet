@@ -22,7 +22,44 @@ Broadstreet Mobile is a Mobile Development Company in Toronto Canada.
    4. Enjoy using Backbone.js, Require.js, jQuery, Lodash, and Modernizr (enjoyment optional)
    5. Install Compass and start Compass Watch.
    
-  
+##Control Set Types
+
+### Text Input
+
+Usage
+![Example](var TextInput = new Input("textInput1","controls",this).render();
+        	TextInput.setTitle("Your Name");)
+        	
+### Selection Input
+
+Usage
+![Example](
+        	var Selection1 = new Selection("selection1","controls",this).render();
+        	Selection1.setTitles("selection","make a selection");
+        	Selection1.addRow("option1",1);
+        	Selection1.addRow("option2",2);
+        	)
+### Toggle Input
+
+Usage
+![Example](var Toggle1 = new Toggle("toggle1","controls",this).render();
+        	Toggle1.setTitle("Do you like this?");
+        	Toggle1.setOptions("YES","NO");
+        	)
+### Message View 
+
+Usage
+![Example](var Message1 = new Toggle("msg1","controls",this).render();
+        	Msg.setTitle("Do you like this?");
+        	Msg.setWarning("Something");
+        	)
+### Label View
+
+Usage
+![Example](var Label1 = new Label("label1","controls",this).render();
+        	Label1.setTitle("label");
+        	Label1.setLabel("label takes html");)
+
 
 ##Contributors
 Darren Hurst - BroadStreet Mobile
