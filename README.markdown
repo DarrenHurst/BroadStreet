@@ -5,12 +5,14 @@ Backbone-JQUERY-Mobile Controls. -> This is not Jquery Mobile
 ![Example](http://i1137.photobucket.com/albums/n510/dhurst74/ScreenShot2012-08-05at20241PM.png)
 #Description
 A Backbone.js and Require.js Boilerplate by Greg Franko was used to demo these controls.
-These controls give your Jquery Mobile like controls but using only Jquery and Backbone.
+These controls give you "Jquery Mobile" like controls but using only Jquery and Backbone.
 
 Follow Greg Franko  - https://github.com/gfranko/Backbone-Require-Boilerplate for the initial Boilerplate used in this project
 for more information on setting up the boiler.
 
 Broadstreet Mobile is a Mobile Development Company in Toronto Canada. 
+
+
 #Getting Started
    1. Clone this repository
    2. Download and install [Node.js](http://nodejs.org/#download) (this is used to run the Require.js Optimizer)
