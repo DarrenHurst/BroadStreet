@@ -4,8 +4,13 @@ Backbone-Require-Boilerplate
 
 ![Example](http://i1137.photobucket.com/albums/n510/dhurst74/ScreenShot2012-08-05at20241PM.png)
 #Description
-A Backbone.js and Require.js Boilerplate that promotes decoupling your JavaScript into modules, separating business logic from application logic using Models and Views, reusing your JavaScript between Desktop and Mobile Web versions, including non-AMD Compatible Third Party Scripts in your project, and optimizing all of your JavaScript (minify, concatenate, etc).
+A Backbone.js and Require.js Boilerplate by Greg Franko was used to demo these controls.
+These controls give your Jquery Mobile like controls but using only Jquery and Backbone.
 
+Follow Greg Franko  - https://github.com/gfranko/Backbone-Require-Boilerplate for the initial Boilerplate used in this project
+for more information on setting up the boiler.
+
+Broadstreet Mobile is a Mobile Development Company in Toronto Canada. 
 #Getting Started
    1. Clone this repository
    2. Download and install [Node.js](http://nodejs.org/#download) (this is used to run the Require.js Optimizer)
@@ -15,10 +20,7 @@ A Backbone.js and Require.js Boilerplate that promotes decoupling your JavaScrip
    4. Enjoy using Backbone.js, Require.js, jQuery, Lodash, and Modernizr (enjoyment optional)
    5. Install Compass and start Compass Watch.
    
-   
-   Follow Greg Franko  - https://github.com/gfranko/Backbone-Require-Boilerplate for the initial Boilerplate used in this project
-
-
+  
 
 ##Contributors
 Darren Hurst - BroadStreet Mobile
