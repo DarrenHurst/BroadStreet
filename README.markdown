@@ -55,9 +55,9 @@ Usage
 
 Usage
             <code>
-			var Message1 = new Toggle("msg1","controls",this).render();<br/>
-        	Msg.setTitle("Do you like this?");<br/>
-        	Msg.setWarning("Something");<br/>
+			var Msg1 = new Msg("msg1","controls",this).render();<br/>
+        	Msg1.setTitle("Do you like this?");<br/>
+        	Msg1.setWarning("Something");<br/>
         	</code>
         	
 ### Label View
