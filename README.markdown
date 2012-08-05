@@ -27,38 +27,47 @@ Broadstreet Mobile is a Mobile Development Company in Toronto Canada.
 ### Text Input
 
 Usage
-![Example](var TextInput = new Input("textInput1","controls",this).render();
-        	TextInput.setTitle("Your Name");)
+			<code>
+			var TextInput = new Input("textInput1","controls",this).render();
+        	TextInput.setTitle("Your Name");
+        	</code>
         	
 ### Selection Input
 
 Usage
-![Example](
+
+            <code>
         	var Selection1 = new Selection("selection1","controls",this).render();
         	Selection1.setTitles("selection","make a selection");
         	Selection1.addRow("option1",1);
-        	Selection1.addRow("option2",2);
-        	)
+        	Selection1.addRow("option2",2);</code>
+       
 ### Toggle Input
 
 Usage
-![Example](var Toggle1 = new Toggle("toggle1","controls",this).render();
+  			<code>
+			var Toggle1 = new Toggle("toggle1","controls",this).render();
         	Toggle1.setTitle("Do you like this?");
         	Toggle1.setOptions("YES","NO");
-        	)
+        	</code>
+        	
 ### Message View 
 
 Usage
-![Example](var Message1 = new Toggle("msg1","controls",this).render();
+            <code>
+			var Message1 = new Toggle("msg1","controls",this).render();
         	Msg.setTitle("Do you like this?");
         	Msg.setWarning("Something");
-        	)
+        	</code>
+        	
 ### Label View
 
 Usage
-![Example](var Label1 = new Label("label1","controls",this).render();
+			<code>
+			var Label1 = new Label("label1","controls",this).render();
         	Label1.setTitle("label");
-        	Label1.setLabel("label takes html");)
+        	Label1.setLabel("label takes html");
+        	</code>
 
 
 ##Contributors
