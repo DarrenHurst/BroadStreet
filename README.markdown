@@ -3,6 +3,10 @@ Backbone-JQUERY-Mobile Controls. -> This is not Jquery Mobile
 ![Example](http://backbonejs.org/docs/images/backbone.png) ![Example](http://requirejs.org/i/logo.png)
 
 ![Example](http://i1137.photobucket.com/albums/n510/dhurst74/ScreenShot2012-08-05at20241PM.png)
+
+With a custom alert.js for IOS style notification!
+
+![Example](http://i1137.photobucket.com/albums/n510/dhurst74/ScreenShot2012-08-06at74044PM.png)
 #Description
 A Backbone.js and Require.js Boilerplate by Greg Franko was used to demo these controls.
 These controls give you "Jquery Mobile" like controls but using only Jquery and Backbone.

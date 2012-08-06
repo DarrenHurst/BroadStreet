@@ -5,8 +5,9 @@ define(['jquery',
 		'controls/labelBox',
 		'controls/selectionList',
 		'controls/toggle',
-		'controls/textInput'
-], function($, Backbone, Model, template,Label,Selection,Toggle,Input){
+		'controls/textInput',
+		'controls/alert'
+], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert){
 
     var View = Backbone.View.extend({
 
@@ -42,7 +43,8 @@ define(['jquery',
         	var TextInput = new Input("textInput1","controls",this).render();
         	TextInput.setTitle("Your Name");
         	
-        	
+        	var AlertControl = new Alert;
+        	AlertControl.setAlert("this is a custom alert");
         },
 
         events: {

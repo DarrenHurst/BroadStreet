@@ -72,9 +72,9 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			//margin fix
 			return prop
 		},
-  focusOutIconImage:function(){
+        focusOutIconImage:function(){
 			$('#' + this.id + '-bsm-input-icon').addClass('input_notselected').removeClass('input_selected');
-},
+		},
 		iconImage : function() {
 			var that = this;
 			 $('#' + this.id + '-bsm-input-icon').addClass('input_selected').removeClass('input_notselected');
