@@ -73,7 +73,12 @@ Usage
 ##Contributors
 Darren Hurst - BroadStreet Mobile<br/>
 <a href="http://www.linkedin.com/profile/view?id=81321609&trk=tab_pro">Connect on LinkedIn</a><br/>
-<a href-"https://twitter.com/ITS_A_NERD">@ITS_A_NERD on Twitter</a><br/>
+
+Lucas Koolma - BroadStreet Mobile<br/>
+<br/>
+Lyle Resnick - BroadStreet Mobile<br/>
+
+
 ![Example](http://i1137.photobucket.com/albums/n510/dhurst74/ScreenShot2012-08-05at43438PM.png)
 
 
