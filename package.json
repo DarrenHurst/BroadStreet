@@ -1,0 +1,35 @@
+{
+  "name": "BDSI-JQ-Backbone-Mobile-Controls",
+  "title": "Backbone and Jquery Mobile Controls",
+  "description": "Backbone Jquery Mobile Controls",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Geekdad/BDSI-JQ-Backbone-Mobile-Controls",
+  "author": {
+    "name": "Darren Hurst",
+    "email": "darren.hurst@broadstreetmobile.com",
+    "url": "http://broadstreetmobile.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Geekdad/BDSI-JQ-Backbone-Mobile-Controls"
+  },
+  "bugs": {
+    "url": "https://github.com/Geekdad/BDSI-JQ-Backbone-Mobile-Controls/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Geekdad/BDSI-JQ-Backbone-Mobile-Controls/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "1.7.2",
+    "backbone": "0.9.2",
+    "lodash": "0.3.1",
+    "require": "2.0.2",
+    "text.js": "2.0.0",
+    "modernizr": "2.5.3",
+    "r.js": "2.0.2"
+  },
+  "keywords": ["Backbone.js", "Require.js", "Backbone and Require Boilerplate","Jquery","JQuery Mobile"]
+}
