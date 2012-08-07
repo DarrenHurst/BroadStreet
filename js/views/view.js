@@ -13,7 +13,14 @@ define(['jquery',
 
         // Represents the actual DOM element that corresponds to your View (There is a one to one relationship between View Objects and DOM elements)
         el: 'body',
-
+     
+        // bind valueChange for the id of the control.
+        // this is a custom events method. you can bind other events normally.
+        controlEvents:function(){
+        return {
+        	"valueChange #textInput1":"alertText",//your event.. 
+        }
+		},
         // View constructor
         initialize: function() {
 
@@ -24,6 +31,10 @@ define(['jquery',
             this.template = _.template( template, { model: this.model.toJSON() } );
             
 
+        },
+        alertText:function(e){
+        	var AlertControl = new Alert;
+        	AlertControl.setAlert(" your name is "+e.getVal());
         },
         createControls: function(){
         	
@@ -41,10 +52,11 @@ define(['jquery',
         	Toggle1.setOptions("YES","NO");
         	
         	var TextInput = new Input("textInput1","controls",this).render();
-        	TextInput.setTitle("Your Name");
+        	TextInput.setTitle("Your Name - will alert on blur");
+        	//TextInput.getVal() will return the input val
+        	//Textinput takes setType - ie password, number
         	
-        	var AlertControl = new Alert;
-        	AlertControl.setAlert("this is a custom alert");
+        	
         },
 
         events: {

@@ -31,7 +31,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 		initialize : function(id, parent, that) {
 			this.id = id;
 			this.parent = "#" + parent;
-			_.extend(this, Backbone.Events);
+			_.extend({}, Backbone.Events);
 			this.parentView = that;
 		},
 		setPlaceHolder : function(placeHolder) {
@@ -59,7 +59,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			return this.el();
 		},
 		html : function() {
-			var control = '<div><input id="' + this.id + '" type="text" class="bsm-text-input" /><div id="' + this.id + '-bsm-input-icon" class="input_notselected bsm-input-icon"></div></div>';
+			var control = '<input id="' + this.id + '" type="text" class="bsm-text-input" /><div id="' + this.id + '-bsm-input-icon" class="input_notselected bsm-input-icon"></div>';
 			return control;
 		},
 		click : function() {
@@ -83,7 +83,8 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 				});
 		},
 		watchVal : function() {
-			var events = this.parentView.events;
+			var events = this.parentView.controlEvents();
+		
 			for(x in events) {
 				var split = events[x].split(":");
 				var bindEvent = split[0];
@@ -108,7 +109,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			var that = this;
 			$("#" + this.id).bind("change", function() {
 				that.val = $("#" + that.id).val();
-	            that.watchVal();
+	           
 			});
 
 			$("#" + this.id).bind("focus", function() {
@@ -120,6 +121,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			$("#" + this.id).bind("blur", function() {
 				that.val = $("#" + that.id).val();
 				that.focusOutIconImage();
+				that.watchVal();
 			
 			});
 

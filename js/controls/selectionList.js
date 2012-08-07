@@ -68,7 +68,7 @@ define(['underscore', 'backbone', 'controls/selectionButton'], function(_, Backb
 			return this.dataArray[this.val];
 		},
 		watchVal : function() {
-			var events = this.parentView.events;
+			var events = this.parentView.controlEvents();
 			for(x in events) {
 				var split = events[x].split(":");
 				var bindEvent = split[0];

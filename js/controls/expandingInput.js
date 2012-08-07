@@ -103,7 +103,7 @@ define(['underscore',
 
    },
     watchVal: function(){	 
-   	     var events = this.parentView.events;
+   	     var events = this.parentView.controlEvents();
    	     for(x in events){
    	     	var split = events[x].split(":");
    	     	var bindEvent = split[0];
