@@ -45,8 +45,8 @@ define(['jquery',
         	
         	var Selection1 = new Selection("selection1","controls",this).render();
         	Selection1.setTitles("selection","make a selection");
-        	Selection1.addRow("option1",1);
-        	Selection1.addRow("option2",2);
+        	Selection1.addRow(Label1.getLabel(),1);
+        	Selection1.addRow(Label1.getLabel(),2);
         	
         	var Toggle1 = new Toggle("toggle1","controls",this).render();
         	Toggle1.setTitle("Do you like this?");

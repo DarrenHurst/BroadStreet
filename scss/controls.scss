@@ -62,12 +62,14 @@ vertical-align: top;
       }
     .bsm_selection_btn{
       border:1px $borderColor solid;
-      background-color:$backgroundColor;
-      
+      background-color:$backgroundColor;      
     } 
   }
 }
-
+.bsm_cell{
+      min-height:30px;
+      padding:10px;
+}
 
 .bsm_selection_title{
     border:1px $borderColor solid;

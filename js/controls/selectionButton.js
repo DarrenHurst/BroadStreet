@@ -35,7 +35,7 @@ define(['underscore',
    },
    html:function(html){
 
-   	var control = '<div id="'+this.id+'_control'+this.idx+'" class="bsm_selection_btn">'+this.data+'</div>';
+   	var control = '<div id="'+this.id+'_control'+this.idx+'" class="bsm_selection_btn"><div class="bsm_cell">'+this.data+'</div></div>';
    	return control;
    },
    numberPattern: new RegExp( "[0-9]+$"),
@@ -45,7 +45,7 @@ define(['underscore',
      this.val ="";
      var that = this;
      $("#"+this.id+'_control'+this.idx).bind("click", function(e) {
-     	    $(that.parent+ "_selection").html(that.data);
+     	    $(that.parent+ "_selection").html('<div class="bsm_cell">'+that.data+'</div>');
      	     var target = e.currentTarget;
      	    //return the clicked options row
      		that.listview.html = $("#"+this.id).html() // 
