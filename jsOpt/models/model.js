@@ -1,0 +1,1 @@
+define(["jquery","backbone"],function($,Backbone){var Model=Backbone.Model.extend({defaults:{message:"You are now using Backbone, Lodash, Require, Modernizr, and jQuery! (Click Me)"},initialize:function(){},validate:function(attrs){}});return Model})
