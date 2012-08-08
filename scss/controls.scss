@@ -1,0 +1,353 @@
+@import "compass/css3";
+@import "compass/utilities";
+
+$borderColor: #d5d5d5;
+$darkgrey:#929292;
+$backgroundColor:#fff;
+$minWidth:100%;
+$padding:15px;
+
+$toggleon: linear-gradient(bottom , rgb(27,54,122) 0%,rgb(93,146,247) 100%);
+$toggleoff: linear-gradient(top , rgb(251,251,251) 0%,rgb(189,189,189) 100%);
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('./fonts/helveticaneueltstd-roman-webfont.eot');
+    src: url('./fonts/helveticaneueltstd-roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/helveticaneueltstd-roman-webfont.woff') format('woff'),
+         url('./fonts/helveticaneueltstd-roman-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'MetaM';
+    src: url('./fonts/metamediumlf-roman-webfont.eot');
+    src: url('./fonts/metamediumlf-roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/metamediumlf-roman-webfont.woff') format('woff'),
+         url('./fonts/metamediumlf-roman-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+  background-color:#d6d6d6;
+  font-family: 'HelveticaNeue';
+           
+}
+img{
+  border:0px;
+  
+}
+
+
+
+//selection control
+
+.bsm_selection{
+font-size:15px;
+vertical-align: top; 
+ 
+
+  .bsm_selection_menu{
+    color:$darkgrey;
+    position:absolute;
+    width:250px;
+    z-index:10;
+    max-height:150px;
+    overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      & > * {
+          -webkit-transform: translateZ(0px); // fix for webkit scrolling/ relative bug
+      }
+    .bsm_selection_btn{
+      border:1px $borderColor solid;
+      background-color:$backgroundColor;      
+    } 
+  }
+}
+.bsm_cell{
+      min-height:30px;
+      padding:10px;
+}
+
+.bsm_selection_title{
+    border:1px $borderColor solid;
+    background-color:$backgroundColor;
+    border-radius:5px !important; 
+     color:$darkgrey;
+}
+#selectionListIcon{
+     float:right;
+     right:-10px;
+     position:relative;
+     top:-7px;
+     background-image: url( '../css/images/controls/selectionListIcon.png');
+     width: 25px;
+     height: 25px;
+     right: 3px;
+     z-index: 2;
+}
+
+//cell style 
+.bsm_cell_content_title{
+   padding:15px;
+}
+.bsm_cell_padding{
+   padding:15px;
+  
+}
+.bsm_cell_nopadding{
+  padding:6px;
+  
+
+
+}
+
+.bsm_emtcell_accountName {
+  display:inline-block;
+  font-weight:bold; 
+}
+
+
+/// input control
+
+.bsm-text-input{
+   color:$darkgrey;
+    padding:13px;
+    font-size:14px;
+    width:100%;
+    border:1px $borderColor solid;
+    background-color:$backgroundColor;
+    border-radius:5px !important;  
+  
+}
+.bsm-textarea-input{
+   color:$darkgrey;
+   padding:13px;
+   font-size:14px;
+   width:246px;
+   border:1px $borderColor solid;
+   background-color:$backgroundColor;
+   border-radius:5px !important;  
+
+  
+}
+ .bsm-input-icon{
+     right:15px;
+     float:right;
+     display:inline;
+     position:relative;
+     top:-37px; 
+     width: 25px;
+     height: 25px;
+     z-index: 2;
+  }
+ .bsm-expanding-icon{
+     right:15px;
+     float:right;
+     display:inline;
+     position:relative;
+     top:-37px; 
+     width: 25px;
+     height: 25px;
+     z-index: 2;
+  }
+ .bsm-textareainput-icon{
+     right:15px;
+     float:right;
+     display:inline;
+     position:absolute;
+     top:-37px; 
+     width: 25px;
+     height: 25px;
+     z-index: 2;
+  }
+ input::-webkit-input-list-button {
+  display:none !important; 
+ }
+  
+ .input_notselected{
+   background-image: url( '../css/images/controls/inputIcon.png');    
+ }
+ .input_selected{
+   background-image: url( '../css/images/controls/xsm.png');
+   
+ }
+ 
+ .expanding_notselected{
+   background-image: url( '../css/images/controls/bluedownarrow.png');     
+ }
+ .expanding_selected{
+   background-image: url( '../css/images/controls/blueuparrow.png');
+ }
+ 
+ expanding_visible{
+   display: inline-block;
+   
+ }
+ expanding_invisible{
+   display: none;
+ }
+ 
+ 
+ ///  Label control
+ .bsm_label{
+    padding:$padding;
+    border:1px $borderColor solid;
+    background-color:$backgroundColor;
+     color:$darkgrey;
+    @include border-radius(5px);  
+     .bsm_cell_accountName{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width:230px;
+    }
+ }
+ 
+ //   Toggle control
+ .bsm_toggle{
+    font-size:15px;
+    font-weight:bold;
+    white-space: nowrap;
+   
+ }
+ .bsm-toggle-menu{
+    font-size:9px;
+    white-space: nowrap;
+ }
+ .bsm-toggle-left{
+    display:inline-block;
+    padding:5px;
+    padding-top:10px;
+    padding-bottom:10px;
+    min-width:10px;
+    border:1px $borderColor solid;
+    background-color:$backgroundColor;
+    @include border-left-radius(10px); 
+    min-width:40px;
+    padding-left:10px;
+    
+ 
+ }
+ .bsm-toggle-right{
+    display:inline-block;
+    padding:5px;
+    padding-top:10px;
+    padding-bottom:10px;
+    min-width:10px;
+    border:1px $borderColor solid;
+    background-color:$backgroundColor;
+    @include border-right-radius(10px); 
+    min-width:40px;
+    margin: 0 auto;
+ }
+ .toggle_on{
+    @include background-image($toggleon);
+    color:#fff;
+ }
+ .toggle_off{
+    @include background-image($toggleoff);
+    color:#6d6d6d;
+ }
+ 
+ //warning msg
+ 
+ .bsm_warning{
+   @include display-box;
+   @include box-orient(horizontal);
+   @include box-align(stretch);
+   min-width:100%;
+   .bsm_warning_icon{
+   
+     padding:5px;
+     width:50px;
+     min-height:40px;
+     background: url( '../css/images/controls/confirm.png');
+     background-repeat:no-repeat;
+     background-position:center; 
+     background-size:40px;
+     background-color: rgb(223,230,166);
+     border: 1px rgb(22,86,16) solid;
+     @include border-left-radius(10px); 
+   }
+   .bsm_warning_msg{
+     @include box-flex(1);
+     padding:5px;
+     min-height:40px;
+     color:#6d6d6d;
+     font-size:16px;
+     font-weight:bold;
+     background-color:#fff;
+      border: 1px rgb(22,86,16) solid;
+   
+     @include border-right-radius(10px); 
+   }
+    .bsm_warning_icon_confirm{
+   
+     padding:5px;
+     width:50px;
+     min-height:40px;
+     background: url( '../css/images/controls/confirm.png');
+     background-repeat:no-repeat;
+     background-position:center; 
+     background-size:40px;
+     background-color: rgb(223,230,166);
+     border: 1px rgb(22,86,16) solid;
+     @include border-left-radius(10px); 
+   }
+   .bsm_warning_msg_confirm{
+     @include box-flex(1);
+     padding:5px;
+     min-height:40px;
+     color:#6d6d6d;
+     font-size:16px;
+     font-weight:bold;
+     background-color:#fff;
+      border: 1px rgb(22,86,16) solid;
+   
+     @include border-right-radius(10px); 
+   }
+   .bsm_warning_icon_alert{
+   
+     padding:5px;
+     width:50px;
+     min-height:40px;
+     background: url( '../css/images/controls/warning.png');
+     background-repeat:no-repeat;
+     background-position:center; 
+     background-size:40px;
+     background-color: rgb(255,244,163);
+     border: 1px rgb(244,74,62) solid;
+     @include border-left-radius(10px); 
+   }
+   .bsm_warning_msg_alert{
+     @include box-flex(1);
+     padding:5px;
+     min-height:40px;
+     color:#6d6d6d;
+     font-size:16px;
+     font-weight:bold;
+     background-color:#fff;
+      border: 1px rgb(244,74,62) solid;
+   
+     @include border-right-radius(10px); 
+   }
+ }
+ 
+.bsm_scrollView{
+    padding:$padding;
+    border:1px $borderColor solid;
+    background-color:$backgroundColor;
+    @include border-radius(10px); 
+    color:$darkgrey;
+    z-index:10;
+    min-height:100px;
+    height:100px;
+    overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      & > * {
+          -webkit-transform: translateZ(0px); // fix for webkit scrolling/ relative bug
+      }
+}
