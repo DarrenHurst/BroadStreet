@@ -440,3 +440,25 @@ expanding_invisible {
   -o-border-bottom-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+/* line 337, ../scss/controls.scss */
+.bsm_scrollView {
+  padding: 15px;
+  border: 1px #d5d5d5 solid;
+  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  color: #929292;
+  z-index: 10;
+  min-height: 100px;
+  height: 100px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+/* line 348, ../scss/controls.scss */
+.bsm_scrollView > * {
+  -webkit-transform: translateZ(0px);
+}

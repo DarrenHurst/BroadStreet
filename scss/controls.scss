@@ -334,3 +334,18 @@ vertical-align: top;
    }
  }
  
+.bsm_scrollView{
+    padding:$padding;
+    border:1px $borderColor solid;
+    background-color:$backgroundColor;
+    @include border-radius(10px); 
+    color:$darkgrey;
+    z-index:10;
+    min-height:100px;
+    height:100px;
+    overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      & > * {
+          -webkit-transform: translateZ(0px); // fix for webkit scrolling/ relative bug
+      }
+}

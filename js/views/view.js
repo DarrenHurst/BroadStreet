@@ -6,8 +6,9 @@ define(['jquery',
 		'controls/selectionList',
 		'controls/toggle',
 		'controls/textInput',
-		'controls/alert'
-], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert){
+		'controls/alert',
+		'controls/scrollView',
+], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView){
 
     var View = Backbone.View.extend({
 
@@ -56,7 +57,23 @@ define(['jquery',
         	//TextInput.getVal() will return the input val
         	//Textinput takes setType - ie password, number
         	
-        	
+        	var ScrollView1 = new ScrollView("scrollView1","controls").render();
+        	ScrollView1.setTitle("Add a ScrollView Panel");
+        	ScrollView1.setHtml("this is a scrollview .. if you fill it"+
+        	"<br/>1"+
+        	"<br/>2"+
+        	"<br/>3"+
+        	"<br/>4"+
+        	"<br/>5"+
+        	"<br/>6"+
+        	"<br/>1"+
+        	"<br/>2"+
+        	"<br/>3"+
+        	"<br/>4"+
+        	"<br/>5"+
+        	"<br/>6"+
+        	"<br/>7");
+        	ScrollView1.setHeight("100");
         },
 
         events: {
