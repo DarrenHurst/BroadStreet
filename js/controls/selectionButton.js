@@ -38,6 +38,7 @@ define(['underscore',
    	var control = '<div id="'+this.id+'_control'+this.idx+'" class="bsm_selection_btn">'+this.data+'</div>';
    	return control;
    },
+   numberPattern: new RegExp( "[0-9]+$"),
    render:function(){
      $("#"+this.id).append(this.html());
     // $(this.id).wrap('<div id="'+this.el()+'"></div>');
@@ -48,7 +49,9 @@ define(['underscore',
      	     var target = e.currentTarget;
      	    //return the clicked options row
      		that.listview.html = $("#"+this.id).html() // 
-     		that.listview.val= parseInt(target.id.substring(target.id.length -1,target.id.length));
+     	    //var valTarget = target.id.match(this.numberPattern)
+     		that.listview.val= that.idx;
+     		
      		that.listview.hideOptions();
      	   // $('.bsm_selection_title').css({"padding":"0px"});
    
