@@ -232,6 +232,9 @@ td { vertical-align: top; }
 	top:0;
 	right:0;
 }
+.info{
+	font-size:.8em;
+}
 #header a{
 	text-decoration:none;
 	color:#e6e6e6;
