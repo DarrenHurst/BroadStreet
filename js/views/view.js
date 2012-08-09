@@ -39,27 +39,27 @@ define(['jquery',
         },
         createControls: function(){
         	
-        	var Label1 = new Label("label1","controls",this).render();
-        	Label1.setTitle("label");
-        	Label1.setLabel("label takes html");
+        	var Label1 = new Label("label1","controls_right",this).render();
+        	Label1.setTitle("Label");
+        	Label1.setLabel("Label takes html");
         	
-        	var Selection1 = new Selection("selection1","controls",this).render();
-        	Selection1.setTitles("selection","make a selection");
+        	var Selection1 = new Selection("selection1","controls_left",this).render();
+        	Selection1.setTitles("Selection","Make a selection");
         	Selection1.addRow(Label1.getLabel(),1);
         	Selection1.addRow(Label1.getLabel(),2);
         	
-        	var Toggle1 = new Toggle("toggle1","controls",this).render();
+        	var Toggle1 = new Toggle("toggle1","controls_left",this).render();
         	Toggle1.setTitle("Do you like this?");
         	Toggle1.setOptions("YES","NO");
         	
-        	var TextInput = new Input("textInput1","controls",this).render();
+        	var TextInput = new Input("textInput1","controls_right",this).render();
         	TextInput.setTitle("Your Name - will alert on blur");
         	//TextInput.getVal() will return the input val
         	//Textinput takes setType - ie password, number
         	
-        	var ScrollView1 = new ScrollView("scrollView1","controls").render();
+        	var ScrollView1 = new ScrollView("scrollView1","controls_right").render();
         	ScrollView1.setTitle("Add a ScrollView Panel");
-        	ScrollView1.setHtml("this is a scrollview .. if you fill it"+
+        	ScrollView1.setHtml("This is a scrollview .. if you fill it"+
         	"<br/>1"+
         	"<br/>2"+
         	"<br/>3"+
