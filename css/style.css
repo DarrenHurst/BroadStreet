@@ -227,6 +227,11 @@ td { vertical-align: top; }
 	color:#000;
 	
 }
+#ribbon{
+	position:absolute;
+	top:0;
+	right:0;
+}
 #header a{
 	text-decoration:none;
 	color:#e6e6e6;
