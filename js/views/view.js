@@ -8,7 +8,8 @@ define(['jquery',
 		'controls/textInput',
 		'controls/alert',
 		'controls/scrollView',
-], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView){
+		'controls/picture'
+], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture){
 
     var View = Backbone.View.extend({
 
@@ -59,21 +60,21 @@ define(['jquery',
         	
         	var ScrollView1 = new ScrollView("scrollView1","controls_right").render();
         	ScrollView1.setTitle("Add a ScrollView Panel");
-        	ScrollView1.setHtml("This is a scrollview .. if you fill it"+
-        	"<br/>1"+
-        	"<br/>2"+
-        	"<br/>3"+
-        	"<br/>4"+
-        	"<br/>5"+
-        	"<br/>6"+
-        	"<br/>1"+
-        	"<br/>2"+
-        	"<br/>3"+
-        	"<br/>4"+
-        	"<br/>5"+
-        	"<br/>6"+
-        	"<br/>7");
+        	ScrollView1.setHtml("<p>BroadStreet is an HTML5, Backbone.js JQuery Control Set, Above are a few of the controls already available.</p>"+
+			"If you would like to contribute please contact me. If you like what you see. Star or Watch the Repo."+
+			"<br/"+
+			"Suggestions are welcome!"+
+			"Thank you for checking us out!");
         	ScrollView1.setHeight("100");
+        	
+        	var Picture1 = new Picture("picture1","controls_left").render();
+        	Picture1.setTitle("Picture with 3 in array");
+        	Picture1.setPictures(["images/html5.jpg",
+        						  "images/backbone.jpeg",
+        						  "images/jquery.jpeg"]);
+        	//var ExpandInput1 = new ExpandInput("expand1","controls_left").render();
+        	//ExpandInput1.setTitle("Message");
+        	
         },
 
         events: {
