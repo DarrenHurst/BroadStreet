@@ -26,7 +26,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			this.id = id;
 			this.parent = "#" + parent;
 			this.height = 200;
-			this.width = 200;
+			this.width = 350;
 		},
 		setTitle : function(title) {
 			$("#" + this.id + "_picture").wrap('<div id="' + this.id + '_header_picture"  class="bsm_picture_title">' + title + '<br/></div>');
