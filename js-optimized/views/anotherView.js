@@ -1,1 +1,0 @@
-define(["jquery","backbone","models/model","views/view"],function($,Backbone,Model,MainView){var AnotherView=MainView.extend({events:{}});return AnotherView})

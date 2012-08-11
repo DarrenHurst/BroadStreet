@@ -1,1 +1,0 @@
-({dir:"../js-optimized",mainConfigFile:"desktop.js",modules:[{name:"mobile"},{name:"desktop"}]})
