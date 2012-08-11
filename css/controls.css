@@ -1,3 +1,4 @@
+@import url(transitions.css);
 @font-face {
   font-family: 'HelveticaNeue';
   src: url("./fonts/helveticaneueltstd-roman-webfont.eot");
@@ -449,7 +450,6 @@ expanding_invisible {
 
 /* line 339, ../scss/controls.scss */
 .bsm_scrollView {
-  padding: 15px;
   border: 1px #d5d5d5 solid;
   background-color: white;
   -webkit-border-radius: 10px;
@@ -467,4 +467,12 @@ expanding_invisible {
 /* line 350, ../scss/controls.scss */
 .bsm_scrollView > * {
   -webkit-transform: translateZ(0px);
+}
+
+/* line 356, ../scss/controls.scss */
+.bsm_childpage {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }

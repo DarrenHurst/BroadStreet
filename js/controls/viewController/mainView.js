@@ -25,13 +25,13 @@ define(['underscore', 'backbone',
 		 
 		},
 		setPage:function(mainPage){
-			this.newPage = new ChildView().render("#"+mainPage);
+			return new ChildView().render(mainPage.cid);
 		},
 		getPage: function(){
 			return this.page;
 		},
 		render : function(parent) {
-			$('#'+parent).wrap('<div id="'+this.cid+'"></div>');
+			$(parent).append('<div id="'+this.cid+'"></div>');
 			
 			return this;
 		}
