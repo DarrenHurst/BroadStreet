@@ -8,8 +8,9 @@ define(['jquery',
 		'controls/textInput',
 		'controls/alert',
 		'controls/scrollView',
-		'controls/picture'
-], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture){
+		'controls/picture',
+		'controls/viewController/mainView'
+], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,MainView){
 
     var View = Backbone.View.extend({
 
@@ -84,8 +85,20 @@ define(['jquery',
 
         render: function() {
 
-            this.$el.find("#example").append(this.template);
+            this.$el.find("#MainPage").append(this.template);
+            this.mainView = new MainView().render("MainPage");
             
+            
+            var page2 =  this.mainView.setPage(this.mainView.cid);
+            
+            var page4 =  this.mainView.setPage(this.mainView.cid);
+            
+            var page5 =  this.mainView.setPage(this.mainView.cid);
+             
+            var page6 =  this.mainView.setPage(this.mainView.cid);
+                        
+
+            //controls should be in MainView() but for sake of demoing paging they are here
             this.createControls();
 
         },
