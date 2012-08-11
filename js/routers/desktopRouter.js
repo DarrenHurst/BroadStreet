@@ -1,4 +1,4 @@
-define(['jquery','backbone','views/view', 'views/anotherView'], function($, Backbone, MainView, AnotherView){
+define(['jquery','backbone','views/view'], function($, Backbone, MainView){
 
     var Router = Backbone.Router.extend({
 
@@ -17,17 +17,15 @@ define(['jquery','backbone','views/view', 'views/anotherView'], function($, Back
 
         },
 
-        'home': function(){
+        'home': function(){  
 
             // Instantiating mainView and anotherView instances
-            var mainView = new MainView(),
-                anotherView = new AnotherView();
-
+            var mainView = new MainView();
+               
             // Renders the mainView template
             mainView.render();
 
-            // anotherView.js extends view.js.  anotherView.js does not have a promptUser method, so JavaScript looks up the prototype chain and uses the view.js promptUser method instead.
-            anotherView.promptUser();
+        
 
         }
     });

@@ -1,6 +1,6 @@
 @import "compass/css3";
 @import "compass/utilities";
-
+@import "transitions.css";
 $borderColor: #d5d5d5;
 $darkgrey:#929292;
 $backgroundColor:#fff;
@@ -337,7 +337,7 @@ vertical-align: top;
  }
  
 .bsm_scrollView{
-    padding:$padding;
+    //padding:$padding;
     border:1px $borderColor solid;
     background-color:$backgroundColor;
     @include border-radius(10px); 
@@ -351,3 +351,13 @@ vertical-align: top;
           -webkit-transform: translateZ(0px); // fix for webkit scrolling/ relative bug
       }
 }
+
+///paging
+.bsm_childpage{
+  display:none;
+  position:absolute;
+  width:100%;
+  height:100%;  
+  
+}
+

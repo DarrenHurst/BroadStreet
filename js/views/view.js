@@ -85,17 +85,26 @@ define(['jquery',
 
         render: function() {
 
-            this.$el.find("#MainPage").append(this.template);
-            this.mainView = new MainView().render("MainPage");
+            //this.$el.find("#MainPage").append(this.template);
             
             
-            var page2 =  this.mainView.setPage(this.mainView.cid);
             
-            var page4 =  this.mainView.setPage(this.mainView.cid);
+            this.app = new MainView().render(this.$el.selector);
             
-            var page5 =  this.mainView.setPage(this.mainView.cid);
+            var page1 =  this.app.setPage(this.app);
+            page1.setHtml(this.template);
+            // page1.setClass("bsm_page");
+            // page1.slideIn();
+            // page1.slideRight();
+            page1.slideLeft();
+            page1.flipIn();
+            
+            var page2 =  this.app.setPage(this.app);
+            page2.setHtml("page 2 not in view.")
+            
+            var page3 =  this.app.setPage(this.app);
              
-            var page6 =  this.mainView.setPage(this.mainView.cid);
+            var page4 =  this.app.setPage(this.app);
                         
 
             //controls should be in MainView() but for sake of demoing paging they are here
