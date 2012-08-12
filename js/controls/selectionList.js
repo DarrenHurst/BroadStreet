@@ -30,10 +30,10 @@ define(['underscore', 'backbone', 'controls/selectionButton'], function(_, Backb
 			var el = '#' + this.id;
 			this.el = el;
 		},
-		initialize : function(id, parent, that) {
+		initialize : function( parent, that) {
 			_.extend(this, Backbone.Events);
 			this.parentView = that;
-			this.id = id;
+			this.id = this.cid;
 			this.parent = "#" + parent;
 			this.idx = 0;
 			this.dataArray = new Array;

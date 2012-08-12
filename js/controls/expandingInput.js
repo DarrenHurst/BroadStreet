@@ -29,8 +29,8 @@ define(['underscore',
    	var el = '#'+this.id;
    	this.el = el;
    },
-   initialize: function(id,parent,idtohide,that){
-   	 this.id = id;
+   initialize: function(parent,idtohide,that){
+   	 this.id = this.cid;
    	 this.parent = "#"+ parent;
    	 this.idtohide = idtohide;
    	  _.extend(this, Backbone.Events);
