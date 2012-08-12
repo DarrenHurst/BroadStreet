@@ -360,4 +360,15 @@ vertical-align: top;
   height:100%;  
   
 }
+.bsm_Button{
+    margin:5px;
+    display:inline-block;
+    padding:10px;
+    min-width:10px;
+    border:1px $borderColor solid;
+    @include background-image($toggleon);
+    color:#fff;
+    @include border-radius(10px); 
+    min-width:40px;
+}
 

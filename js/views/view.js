@@ -9,8 +9,9 @@ define(['jquery',
 		'controls/alert',
 		'controls/scrollView',
 		'controls/picture',
+		'controls/button',
 		'controls/viewController/mainView'
-], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,MainView){
+], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView){
 
     var View = Backbone.View.extend({
 
@@ -59,6 +60,7 @@ define(['jquery',
         	//TextInput.getVal() will return the input val
         	//Textinput takes setType - ie password, number
         	
+        	
         	var ScrollView1 = new ScrollView("scrollView1","controls_right").render();
         	ScrollView1.setTitle("Add a ScrollView Panel");
         	ScrollView1.setHtml("<p>BroadStreet is an HTML5, Backbone.js JQuery Control Set, Above are a few of the controls already available.</p>"+
@@ -75,7 +77,16 @@ define(['jquery',
         						  "images/jquery.jpeg"]);
         	//var ExpandInput1 = new ExpandInput("expand1","controls_left").render();
         	//ExpandInput1.setTitle("Message");
+        	var Btn1 =  new Button().render("controls_right");
+        	Btn1.setText("Click For Page 2");
+        	Btn1.setEvent(this,"alertButton");
         	
+        	
+        },
+        alertButton: function(e){
+        	console.log(e);
+        	e.page1.flipOut();
+        	e.page2.slideLeft();
         },
 
         events: {
@@ -91,16 +102,16 @@ define(['jquery',
             
             this.app = new MainView().render(this.$el.selector);
             
-            var page1 =  this.app.setPage(this.app);
-            page1.setHtml(this.template);
+            this.page1 =  this.app.setPage(this.app);
+            this.page1.setHtml(this.template);
             // page1.setClass("bsm_page");
             // page1.slideIn();
             // page1.slideRight();
-            page1.slideLeft();
-            page1.flipIn();
+            this.page1.slideLeft();
+            this.page1.flipIn();
             
-            var page2 =  this.app.setPage(this.app);
-            page2.setHtml("page 2 not in view.")
+            this.page2 =  this.app.setPage(this.app);
+            this.page2.setHtml("page 2 not in view.")
             
             var page3 =  this.app.setPage(this.app);
              
