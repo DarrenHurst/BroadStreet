@@ -37,6 +37,12 @@ define(['underscore', 'backbone','controls/viewController/mainView'
 		flipIn: function(){
 		    $("#"+this.cid).css({"display":"inline"});
 			$("#"+this.cid).addClass("flip.in");
+			$("#"+this.cid).removeClass("flip.out");
+		},
+		flipOut: function(){
+		    $("#"+this.cid).css({"display":"none"});
+		    $("#"+this.cid).removeClass("flip.in");
+			$("#"+this.cid).addClass("flip.out");
 		},
 		render : function(mainView) {
 			$("#"+mainView).append('<div id="'+this.cid+'" class="bsm_childpage"></div>');
