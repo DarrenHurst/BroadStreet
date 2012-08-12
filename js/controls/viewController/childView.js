@@ -9,6 +9,7 @@ define(['underscore', 'backbone','controls/viewController/mainView'
 		},
 		setHtml: function(html){
 			$("#"+this.cid).html(html);
+			//alert(html);
 			this.html=html;
 		},
 		getHtml: function(){

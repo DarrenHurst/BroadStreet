@@ -22,8 +22,8 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			var el = '#' + this.id;
 			this.el = el;
 		},
-		initialize : function(id, parent) {
-			this.id = id;
+		initialize : function( parent) {
+			this.id = this.cid;
 			this.parent = "#" + parent;
 		},
 		setTitle : function(title) {

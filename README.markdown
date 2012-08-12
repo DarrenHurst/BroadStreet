@@ -30,11 +30,17 @@ Broadstreet Mobile is a Mobile Development Company in Toronto Canada.
    
 ##Control Set Types
 
+Controls take the target Div, and for input controls - this [view scope] for valueChange event 
 ### Text Input
+Button
+            <code>var Btn1 =  new Button().render("controls_right");
+        	Btn1.setText("Click For Page 2");
+        	Btn1.setEvent(this,"alertButton");</code>
+
 
 Usage
 			<code>
-			var TextInput = new Input("textInput1","controls",this).render();<br/>
+			var TextInput = new Input("controls",this).render();<br/>
         	TextInput.setTitle("Your Name");
         	</code>
         	
@@ -42,7 +48,7 @@ Usage
 
 Usage
             <code>
-        	var Selection1 = new Selection("selection1","controls",this).render();<br/>
+        	var Selection1 = new Selection("controls",this).render();<br/>
         	Selection1.setTitles("selection","make a selection");<br/>
         	Selection1.addRow("option1",1);<br/>
         	Selection1.addRow("option2",2);<br/>
@@ -52,7 +58,7 @@ Usage
 
 Usage
   			<code>
-			var Toggle1 = new Toggle("toggle1","controls",this).render();<br/>
+			var Toggle1 = new Toggle("controls",this).render();<br/>
         	Toggle1.setTitle("Do you like this?");<br/>
         	Toggle1.setOptions("YES","NO");<br/>
         	</code>
@@ -61,7 +67,7 @@ Usage
 
 Usage
             <code>
-			var Msg1 = new Msg("msg1","controls",this).render();<br/>
+			var Msg1 = new Msg("controls",this).render();<br/>
         	Msg1.setTitle("Do you like this?");<br/>
         	Msg1.setWarning("Something");<br/>
         	</code>
@@ -70,7 +76,7 @@ Usage
 
 Usage
 			<code>
-			var Label1 = new Label("label1","controls",this).render();<br/>
+			var Label1 = new Label("controls",this).render();<br/>
         	Label1.setTitle("label");<br/>
         	Label1.setLabel("label takes html");<br/>
         	</code>

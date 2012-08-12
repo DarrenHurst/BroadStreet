@@ -10,8 +10,9 @@ define(['jquery',
 		'controls/scrollView',
 		'controls/picture',
 		'controls/button',
-		'controls/viewController/mainView'
-], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView){
+		'controls/viewController/mainView',
+		'views/page2'
+], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView,Page2){
 
     var View = Backbone.View.extend({
 
@@ -42,26 +43,26 @@ define(['jquery',
         },
         createControls: function(){
         	
-        	var Label1 = new Label("label1","controls_right",this).render();
+        	var Label1 = new Label("controls_right",this).render();
         	Label1.setTitle("Label");
         	Label1.setLabel("Label takes html");
         	
-        	var Selection1 = new Selection("selection1","controls_left",this).render();
+        	var Selection1 = new Selection("controls_left",this).render();
         	Selection1.setTitles("Selection","Make a selection");
         	Selection1.addRow(Label1.getLabel(),1);
         	Selection1.addRow(Label1.getLabel(),2);
         	
-        	var Toggle1 = new Toggle("toggle1","controls_left",this).render();
+        	var Toggle1 = new Toggle("controls_left",this).render();
         	Toggle1.setTitle("Do you like this?");
         	Toggle1.setOptions("YES","NO");
         	
-        	var TextInput = new Input("textInput1","controls_right",this).render();
+        	var TextInput = new Input("controls_right",this).render();
         	TextInput.setTitle("Your Name - will alert on blur");
         	//TextInput.getVal() will return the input val
         	//Textinput takes setType - ie password, number
         	
         	
-        	var ScrollView1 = new ScrollView("scrollView1","controls_right").render();
+        	var ScrollView1 = new ScrollView("controls_right").render();
         	ScrollView1.setTitle("Add a ScrollView Panel");
         	ScrollView1.setHtml("<p>BroadStreet is an HTML5, Backbone.js JQuery Control Set, Above are a few of the controls already available.</p>"+
 			"If you would like to contribute please contact me. If you like what you see. Star or Watch the Repo."+
@@ -70,7 +71,7 @@ define(['jquery',
 			"Thank you for checking us out!");
         	ScrollView1.setHeight("100");
         	
-        	var Picture1 = new Picture("picture1","controls_left").render();
+        	var Picture1 = new Picture("controls_left").render();
         	Picture1.setTitle("Picture with 3 in array");
         	Picture1.setPictures(["images/html5.jpg",
         						  "images/backbone.jpeg",
@@ -108,10 +109,12 @@ define(['jquery',
             // page1.slideIn();
             // page1.slideRight();
             this.page1.slideLeft();
-            this.page1.flipIn();
+           // this.page1.flipIn();
             
             this.page2 =  this.app.setPage(this.app);
-            this.page2.setHtml("page 2 not in view.")
+            var page2obj = new Page2(this).render();
+            this.page2.setHtml(page2obj.template);
+            page2obj.render();
             
             var page3 =  this.app.setPage(this.app);
              

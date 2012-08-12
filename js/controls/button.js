@@ -25,6 +25,15 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 	    setClass: function(name){
 	    	$('#'+this.cid+ '_Button').addClass(name).removeClass("bsm_Button");
 	    },
+	    setClickState: function(){
+	    	
+	    },
+	    setHoverOnState: function(){
+	    	
+	    },
+	    setHoverOffState: function(){
+	    	
+	    },
 	    execFN : function(functionName, context, args) {
 			var args = Array.prototype.slice.call(arguments).splice(2);
 			var namespaces = functionName.split(".");
