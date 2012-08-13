@@ -58,6 +58,10 @@ define(['underscore', 'backbone', 'controls/selectionButton'], function(_, Backb
 			});
 
 		},
+		setEvent: function(parent,method){
+	       this.parent = parent;
+	       this.method = method;
+	    },
 		addRow : function(html, data) {
 			this.dataArray.push(data);
 			//adds to selection list
@@ -68,15 +72,7 @@ define(['underscore', 'backbone', 'controls/selectionButton'], function(_, Backb
 			return this.dataArray[this.val];
 		},
 		watchVal : function() {
-			var events = this.parentView.controlEvents();
-			for(x in events) {
-				var split = events[x].split(":");
-				var bindEvent = split[0];
-				if("valueChange #" + this.id == x) {
-					this.trigger("valueChange", this.execFN(bindEvent, this.parentView, this));
-				}
-			}
-
+			 this.trigger("click", this.execFN(this.method, this.parent, this));
 		},
 		execFN : function(functionName, context, args) {
 			var args = Array.prototype.slice.call(arguments).splice(2);

@@ -39,6 +39,10 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			var id = this.id;
 			this.optionSelection(id);
 		},
+		setEvent: function(parent,method){
+	       this.parent = parent;
+	       this.method = method;
+	    },
 		setClass : function(className) {
 			$('#' + this.id + '_toggle').addClass(className).removeClass('bsm_toggle');
 		},
@@ -84,15 +88,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			return this.el();
 		},
 		watchVal : function() {
-			var events = this.parentView.controlEvents();
-			for(x in events) {
-				var split = events[x].split(":");
-				var bindEvent = split[0];
-				if("valueChange #" + this.id == x) {
-					this.trigger("valueChange", this.execFN(bindEvent, this.parentView, this));
-				}
-			}
-
+		       this.trigger("click", this.execFN(this.method, this.parent, this));
 		},
 		execFN : function(functionName, context, args) {
 			var args = Array.prototype.slice.call(arguments).splice(2);

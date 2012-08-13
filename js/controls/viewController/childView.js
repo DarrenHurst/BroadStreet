@@ -42,8 +42,8 @@ define(['underscore', 'backbone','controls/viewController/mainView'
 		},
 		flipOut: function(){
 		    $("#"+this.cid).css({"display":"none"});
-		    $("#"+this.cid).removeClass("flip.in");
 			$("#"+this.cid).addClass("flip.out");
+			$("#"+this.cid).removeClass("flip.in");
 		},
 		render : function(mainView) {
 			$("#"+mainView).append('<div id="'+this.cid+'" class="bsm_childpage"></div>');

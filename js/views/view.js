@@ -21,11 +21,7 @@ define(['jquery',
      
         // bind valueChange for the id of the control.
         // this is a custom events method. you can bind other events normally.
-        controlEvents:function(){
-        return {
-        	"valueChange #textInput1":"alertText",//your event.. 
-        }
-		},
+       
         // View constructor
         initialize: function() {
 
@@ -39,7 +35,7 @@ define(['jquery',
         },
         alertText:function(e){
         	var AlertControl = new Alert;
-        	AlertControl.setAlert(" your name is "+e.getVal());
+        	AlertControl.setAlert(" your name is "+this.getVal());
         },
         createControls: function(){
         	
@@ -58,6 +54,7 @@ define(['jquery',
         	
         	var TextInput = new Input("controls_right",this).render();
         	TextInput.setTitle("Your Name - will alert on blur");
+        	TextInput.setEvent(this,"alertText");
         	//TextInput.getVal() will return the input val
         	//Textinput takes setType - ie password, number
         	
@@ -103,6 +100,8 @@ define(['jquery',
             
             this.app = new MainView().render(this.$el.selector);
             
+            
+            
             this.page1 =  this.app.setPage(this.app);
             this.page1.setHtml(this.template);
             // page1.setClass("bsm_page");
@@ -111,10 +110,18 @@ define(['jquery',
             this.page1.slideLeft();
            // this.page1.flipIn();
             
+            
+            //create the page2 in main View
             this.page2 =  this.app.setPage(this.app);
-            var page2obj = new Page2(this).render();
+            //generate the page2 object
+            var page2obj = new Page2(this);
+            // add the page2 instance to the main view object
             this.page2.setHtml(page2obj.template);
+            // render the page2 view
             page2obj.render();
+            
+            
+            
             
             var page3 =  this.app.setPage(this.app);
              
