@@ -34,6 +34,10 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			_.extend({}, Backbone.Events);
 			this.parentView = that;
 		},
+		setEvent: function(parent,method){
+	       this.parent = parent;
+	       this.method = method;
+	    },
 		setPlaceHolder : function(placeHolder) {
 			this.placeHolder = placeHolder;
 			$("#" + this.id).prop('placeHolder', this.placeHolder);
@@ -43,6 +47,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 		},
 		setType : function(typein) {
 			$("#" + this.id).prop('type', typein);
+
 		},
 		getPlaceHolder : function() {
 			return this.placeHolder();
@@ -50,6 +55,10 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 
 		getVal : function() {
 			return this.val;
+		},
+		setVal : function( val) {
+			 this.val = val;
+			$("#" + this.id).val( val );
 		},
 		clear : function() {
 			$("#" + this.id).val('');
@@ -74,17 +83,20 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 		},
         focusOutIconImage:function(){
 			$('#' + this.id + '-bsm-input-icon').addClass('input_notselected').removeClass('input_selected');
-		},
+
+        },
 		iconImage : function() {
 			var that = this;
 			 $('#' + this.id + '-bsm-input-icon').addClass('input_selected').removeClass('input_notselected');
-				$('#' + this.id + '-bsm-input-icon').bind("click", function() {
+				$('#' + this.id + '-bsm-input-icon').bind("keyup", function() {
 					$("#" + that.id ).val(' ');
+					that.val="";
+					that.watchVal();
 				});
 		},
 		watchVal : function() {
 			var events = this.parentView.controlEvents();
-		
+
 			for(x in events) {
 				var split = events[x].split(":");
 				var bindEvent = split[0];
@@ -107,10 +119,28 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			$(this.parent).append(this.html());
 			this.val = "";
 			var that = this;
-			$("#" + this.id).bind("change", function() {
+
+			$("#" + this.id).bind('keyup', function(e) {
 				that.val = $("#" + that.id).val();
-	           
+			    console.log(e.which);
+				var x;
+				if (e.which ==188){
+					 x = that.val.replace(/,/g, '');
+				
+					 $("#" + that.id).val('');
+					 $("#" + that.id).val(x);
+				}
+	               that.watchVal();
+
 			});
+			
+            $("#" + this.id).bind("change", function() {
+            	 var x;
+             
+            	 //x = that.val.replace(/,/g, '');
+            	 $("#" + that.id).val(that.val);
+            	 
+            });
 
 			$("#" + this.id).bind("focus", function() {
 
@@ -119,9 +149,12 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			});
 																																												
 			$("#" + this.id).bind("blur", function() {
-				that.val = $("#" + that.id).val();
+				//that.val = $("#" + that.id).val();
 				that.focusOutIconImage();
-				that.watchVal();
+				
+	    		that.trigger("click", that.execFN(that.method, that.parent, this));
+	    
+								//that.watchVal();
 			
 			});
 
