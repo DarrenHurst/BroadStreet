@@ -15,23 +15,23 @@
   font-style: normal;
 }
 
-/* line 33, ../scss/controls.scss */
+/* line 35, ../scss/controls.scss */
 body {
   background-color: #d6d6d6;
   font-family: 'HelveticaNeue';
 }
 
-/* line 38, ../scss/controls.scss */
+/* line 40, ../scss/controls.scss */
 img {
   border: 0px;
 }
 
-/* line 47, ../scss/controls.scss */
+/* line 49, ../scss/controls.scss */
 .bsm_selection {
   font-size: 15px;
   vertical-align: top;
 }
-/* line 52, ../scss/controls.scss */
+/* line 54, ../scss/controls.scss */
 .bsm_selection .bsm_selection_menu {
   color: #929292;
   position: absolute;
@@ -41,23 +41,23 @@ img {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-/* line 60, ../scss/controls.scss */
+/* line 62, ../scss/controls.scss */
 .bsm_selection .bsm_selection_menu > * {
   -webkit-transform: translateZ(0px);
 }
-/* line 63, ../scss/controls.scss */
+/* line 65, ../scss/controls.scss */
 .bsm_selection .bsm_selection_menu .bsm_selection_btn {
   border: 1px #d5d5d5 solid;
   background-color: white;
 }
 
-/* line 69, ../scss/controls.scss */
+/* line 71, ../scss/controls.scss */
 .bsm_cell {
   min-height: 30px;
   padding: 10px;
 }
 
-/* line 74, ../scss/controls.scss */
+/* line 76, ../scss/controls.scss */
 .bsm_selection_title {
   border: 1px #d5d5d5 solid;
   background-color: white;
@@ -65,7 +65,7 @@ img {
   color: #929292;
 }
 
-/* line 80, ../scss/controls.scss */
+/* line 82, ../scss/controls.scss */
 #selectionListIcon {
   float: right;
   right: -10px;
@@ -78,28 +78,28 @@ img {
   z-index: 2;
 }
 
-/* line 93, ../scss/controls.scss */
+/* line 95, ../scss/controls.scss */
 .bsm_cell_content_title {
   padding: 15px;
 }
 
-/* line 96, ../scss/controls.scss */
+/* line 98, ../scss/controls.scss */
 .bsm_cell_padding {
   padding: 15px;
 }
 
-/* line 100, ../scss/controls.scss */
+/* line 102, ../scss/controls.scss */
 .bsm_cell_nopadding {
   padding: 6px;
 }
 
-/* line 107, ../scss/controls.scss */
+/* line 109, ../scss/controls.scss */
 .bsm_emtcell_accountName {
   display: inline-block;
   font-weight: bold;
 }
 
-/* line 115, ../scss/controls.scss */
+/* line 117, ../scss/controls.scss */
 .bsm-text-input {
   color: #929292;
   padding: 13px;
@@ -110,7 +110,7 @@ img {
   border-radius: 5px !important;
 }
 
-/* line 125, ../scss/controls.scss */
+/* line 127, ../scss/controls.scss */
 .bsm-textarea-input {
   color: #929292;
   padding: 13px;
@@ -121,7 +121,7 @@ img {
   border-radius: 5px !important;
 }
 
-/* line 136, ../scss/controls.scss */
+/* line 138, ../scss/controls.scss */
 .bsm-input-icon {
   right: 15px;
   float: right;
@@ -133,7 +133,7 @@ img {
   z-index: 2;
 }
 
-/* line 146, ../scss/controls.scss */
+/* line 148, ../scss/controls.scss */
 .bsm-expanding-icon {
   right: 15px;
   float: right;
@@ -145,7 +145,7 @@ img {
   z-index: 2;
 }
 
-/* line 156, ../scss/controls.scss */
+/* line 158, ../scss/controls.scss */
 .bsm-textareainput-icon {
   right: 15px;
   float: right;
@@ -157,42 +157,42 @@ img {
   z-index: 2;
 }
 
-/* line 166, ../scss/controls.scss */
+/* line 168, ../scss/controls.scss */
 input::-webkit-input-list-button {
   display: none !important;
 }
 
-/* line 170, ../scss/controls.scss */
+/* line 172, ../scss/controls.scss */
 .input_notselected {
   background-image: url("../css/images/controls/inputIcon.png");
 }
 
-/* line 173, ../scss/controls.scss */
+/* line 175, ../scss/controls.scss */
 .input_selected {
   background-image: url("../css/images/controls/xsm.png");
 }
 
-/* line 178, ../scss/controls.scss */
+/* line 180, ../scss/controls.scss */
 .expanding_notselected {
   background-image: url("../css/images/controls/bluedownarrow.png");
 }
 
-/* line 181, ../scss/controls.scss */
+/* line 183, ../scss/controls.scss */
 .expanding_selected {
   background-image: url("../css/images/controls/blueuparrow.png");
 }
 
-/* line 185, ../scss/controls.scss */
+/* line 187, ../scss/controls.scss */
 expanding_visible {
   display: inline-block;
 }
 
-/* line 189, ../scss/controls.scss */
+/* line 191, ../scss/controls.scss */
 expanding_invisible {
   display: none;
 }
 
-/* line 195, ../scss/controls.scss */
+/* line 197, ../scss/controls.scss */
 .bsm_label {
   padding: 15px;
   border: 1px #d5d5d5 solid;
@@ -204,7 +204,7 @@ expanding_invisible {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 201, ../scss/controls.scss */
+/* line 203, ../scss/controls.scss */
 .bsm_label .bsm_cell_accountName {
   white-space: nowrap;
   overflow: hidden;
@@ -212,20 +212,20 @@ expanding_invisible {
   max-width: 230px;
 }
 
-/* line 210, ../scss/controls.scss */
+/* line 212, ../scss/controls.scss */
 .bsm_toggle {
   font-size: 15px;
   font-weight: bold;
   white-space: nowrap;
 }
 
-/* line 216, ../scss/controls.scss */
+/* line 218, ../scss/controls.scss */
 .bsm-toggle-menu {
   font-size: 9px;
   white-space: nowrap;
 }
 
-/* line 220, ../scss/controls.scss */
+/* line 222, ../scss/controls.scss */
 .bsm-toggle-left {
   display: inline-block;
   padding: 5px;
@@ -248,7 +248,7 @@ expanding_invisible {
   padding-left: 10px;
 }
 
-/* line 234, ../scss/controls.scss */
+/* line 236, ../scss/controls.scss */
 .bsm-toggle-right {
   display: inline-block;
   padding: 5px;
@@ -271,7 +271,7 @@ expanding_invisible {
   margin: 0 auto;
 }
 
-/* line 246, ../scss/controls.scss */
+/* line 248, ../scss/controls.scss */
 .toggle_on {
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #1b367a), color-stop(100%, #5d92f7));
   background-image: -webkit-linear-gradient(bottom, #1b367a 0%, #5d92f7 100%);
@@ -282,7 +282,7 @@ expanding_invisible {
   color: #fff;
 }
 
-/* line 250, ../scss/controls.scss */
+/* line 252, ../scss/controls.scss */
 .toggle_off {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fbfbfb), color-stop(100%, #bdbdbd));
   background-image: -webkit-linear-gradient(top, #fbfbfb 0%, #bdbdbd 100%);
@@ -293,7 +293,7 @@ expanding_invisible {
   color: #6d6d6d;
 }
 
-/* line 257, ../scss/controls.scss */
+/* line 259, ../scss/controls.scss */
 .bsm_warning {
   display: -webkit-box;
   display: -moz-box;
@@ -309,7 +309,7 @@ expanding_invisible {
   box-align: stretch;
   min-width: 100%;
 }
-/* line 262, ../scss/controls.scss */
+/* line 264, ../scss/controls.scss */
 .bsm_warning .bsm_warning_icon {
   padding: 5px;
   width: 50px;
@@ -331,7 +331,7 @@ expanding_invisible {
   -o-border-bottom-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-/* line 275, ../scss/controls.scss */
+/* line 277, ../scss/controls.scss */
 .bsm_warning .bsm_warning_msg {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -355,7 +355,7 @@ expanding_invisible {
   -o-border-bottom-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-/* line 287, ../scss/controls.scss */
+/* line 289, ../scss/controls.scss */
 .bsm_warning .bsm_warning_icon_confirm {
   padding: 5px;
   width: 50px;
@@ -377,7 +377,7 @@ expanding_invisible {
   -o-border-bottom-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-/* line 300, ../scss/controls.scss */
+/* line 302, ../scss/controls.scss */
 .bsm_warning .bsm_warning_msg_confirm {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -401,7 +401,7 @@ expanding_invisible {
   -o-border-bottom-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-/* line 312, ../scss/controls.scss */
+/* line 314, ../scss/controls.scss */
 .bsm_warning .bsm_warning_icon_alert {
   padding: 5px;
   width: 50px;
@@ -423,7 +423,7 @@ expanding_invisible {
   -o-border-bottom-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-/* line 325, ../scss/controls.scss */
+/* line 327, ../scss/controls.scss */
 .bsm_warning .bsm_warning_msg_alert {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -448,7 +448,7 @@ expanding_invisible {
   border-bottom-right-radius: 10px;
 }
 
-/* line 339, ../scss/controls.scss */
+/* line 341, ../scss/controls.scss */
 .bsm_scrollView {
   border: 1px #d5d5d5 solid;
   background-color: white;
@@ -464,12 +464,12 @@ expanding_invisible {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-/* line 350, ../scss/controls.scss */
+/* line 352, ../scss/controls.scss */
 .bsm_scrollView > * {
   -webkit-transform: translateZ(0px);
 }
 
-/* line 356, ../scss/controls.scss */
+/* line 358, ../scss/controls.scss */
 .bsm_childpage {
   display: none;
   position: absolute;
@@ -477,7 +477,7 @@ expanding_invisible {
   height: 100%;
 }
 
-/* line 363, ../scss/controls.scss */
+/* line 365, ../scss/controls.scss */
 .bsm_Button {
   margin: 5px;
   display: inline-block;
@@ -497,4 +497,58 @@ expanding_invisible {
   -o-border-radius: 10px;
   border-radius: 10px;
   min-width: 40px;
+}
+
+/* line 376, ../scss/controls.scss */
+.bsm_spinner {
+  background: url("../css/images/controls/spinner.gif");
+  background-color: #000;
+  height: 80px;
+  width: 80px;
+  padding: 5px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+  position: fixed;
+  top: 40%;
+  left: 45%;
+  z-index: 9999999;
+  opacity: 0.8;
+}
+
+/* line 392, ../scss/controls.scss */
+.bsm_spinner_with_text {
+  background: url("../css/images/controls/spinner.gif");
+  background-color: #000;
+  height: 80px;
+  width: 80px;
+  padding: 5px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: 50% 35%;
+  background-size: 30px;
+  position: fixed;
+  top: 40%;
+  left: 45%;
+  z-index: 9999999;
+  opacity: 0.8;
+}
+/* line 407, ../scss/controls.scss */
+.bsm_spinner_with_text .text {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  padding-top: 5px;
+  bottom: 5px;
+  color: #FFF;
+  font-size: 0.9em;
+}
+
+/* line 418, ../scss/controls.scss */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999998;
 }
