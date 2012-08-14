@@ -11,7 +11,11 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 
 
 	var AlertControl = Backbone.View.extend({
-    
+    removeAlert: function(){
+    	$('.alert').remove();
+    	$('.alertoverlay').remove();
+    	$('.alerterror').remove();
+    },
   
 	setAlert :function (msg){
 	
@@ -114,6 +118,8 @@ define(['underscore', 'backbone'], function(_, Backbone) {
     
     
     $('.alerterror').bind('click',function(){
+    	
+    	$('.alert').remove();
     	$('.alertoverlay').remove();
     	$('.alerterror').remove();
     

@@ -11,8 +11,9 @@ define(['jquery',
 		'controls/picture',
 		'controls/button',
 		'controls/viewController/mainView',
+		'controls/spinner',
 		'views/page2'
-], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView,Page2){
+], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView,Spinner,Page2){
 
     var View = Backbone.View.extend({
 
@@ -38,6 +39,12 @@ define(['jquery',
         	AlertControl.setAlert(" your name is "+this.getVal());
         },
         createControls: function(){
+           
+        	var Spinner1 = new Spinner("a","Loading...");
+        	Spinner1.showSpinner();
+        	setTimeout(function(){
+        		Spinner1.hideSpinner();
+        	},1000);
         	
         	var Label1 = new Label("controls_right",this).render();
         	Label1.setTitle("Label");
