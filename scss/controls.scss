@@ -10,6 +10,8 @@ $padding:15px;
 $toggleon: linear-gradient(bottom , rgb(27,54,122) 0%,rgb(93,146,247) 100%);
 $toggleoff: linear-gradient(top , rgb(251,251,251) 0%,rgb(189,189,189) 100%);
 
+//$spinner:image-url("../css/images/controls/spinner.gif");
+
 @font-face {
     font-family: 'HelveticaNeue';
     src: url('./fonts/helveticaneueltstd-roman-webfont.eot');
@@ -371,4 +373,51 @@ vertical-align: top;
     @include border-radius(10px); 
     min-width:40px;
 }
-
+.bsm_spinner{
+   background :url("../css/images/controls/spinner.gif");
+   background-color:#000;
+   height:80px;
+   width:80px;
+   padding:5px;
+   border-radius:10px;
+   background-repeat:no-repeat;
+   background-position:center; 
+   background-size:30px;
+   position:fixed;
+   top:40%;
+   left:45%;
+   z-index:9999999;
+   opacity:0.8;
+}
+.bsm_spinner_with_text{
+    background :url("../css/images/controls/spinner.gif");
+   background-color:#000;
+   height:80px;
+   width:80px;
+   padding:5px;
+   border-radius:10px;
+   background-repeat:no-repeat;
+   background-position:50% 35%; 
+   background-size:30px;
+   position:fixed;
+   top:40%;
+   left:45%;
+   z-index:9999999;
+   opacity:0.8;
+   .text{
+       width:100%;
+     
+       text-align:center;
+       position:absolute;
+       padding-top:5px;
+       bottom:5px;
+       color:#FFF;
+       font-size:0.9em;
+   }
+}
+.overlay{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:9999998;
+}
