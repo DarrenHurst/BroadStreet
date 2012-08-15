@@ -31,7 +31,7 @@ define(['underscore', 'backbone',
 			return this.page;
 		},
 		render : function(parent) {
-			$(parent).append('<div id="'+this.cid+'"></div>');
+			$(parent).append('<div id="'+this.cid+'" class="bsm_page"></div>');
 			
 			return this;
 		}

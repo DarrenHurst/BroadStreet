@@ -14,7 +14,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 
 	var ButtonControl = Backbone.View.extend({
 	    setText: function(text){
-	    	$('#'+this.cid+ '_Button').html(text);
+	    	$('#'+this.cid+ '_Button').html("<div id='text'>"+text+"</div>");
 	    },
 	    setEvent: function(parent,method){
 	    	var that = this;
@@ -34,6 +34,9 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 	    setHoverOffState: function(){
 	    	
 	    },
+	    getId:function(){
+	    	return this.cid +"_Button";
+	    },
 	    execFN : function(functionName, context, args) {
 			var args = Array.prototype.slice.call(arguments).splice(2);
 			var namespaces = functionName.split(".");
@@ -44,7 +47,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			return context[func].apply(this, args);
 		},
 	    html : function() {
-			var control = '<div id="' + this.cid + '_Button" class="bsm_Button"></div>';
+			var control = '<div id="' + this.cid + '_Button" class="bsm_Button" ></div>';
 			return control;
 		},
 		render : function(selector) {

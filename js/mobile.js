@@ -11,7 +11,9 @@ require.config({
       backbone: "libs/backbone-0.9.2",
 
       // Require.js Plugins
-      text: "plugins/text-2.0.0"
+      text: "plugins/text-2.0.0",
+      
+      raphael:'libs/raphael'
 
   },
 
@@ -21,6 +23,10 @@ require.config({
       "backbone": {
           deps: ["underscore", "jquery"],
           exports: "Backbone"  //attaches "Backbone" to the window object
+      },
+       "raphael": {
+          deps: ["eve"],
+          exports: "raphael"  //attaches "Backbone" to the window object
       }
 
   } // end Shim Configuration
@@ -28,7 +34,7 @@ require.config({
 });
 
 // Include Desktop Specific JavaScript files here (or inside of your Desktop router)
-require(['modernizr','jquery','backbone','routers/mobileRouter'], function(Modernizr, $, Backbone, Mobile) {
+require(['modernizr','jquery','backbone','routers/mobileRouter','raphael'], function(Modernizr, $, Backbone, Mobile,Raphael) {
 
     // Instantiates a new Router
     this.router = new Mobile();
