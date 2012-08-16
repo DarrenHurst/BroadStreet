@@ -10,11 +10,11 @@
  *
  */
 
-define(['underscore', 'backbone'], function(_, Backbone) {
+define(['underscore', 'backbone','icons/icons'], function(_, Backbone,Icons) {
 
 	var ButtonControl = Backbone.View.extend({
 	    setText: function(text){
-	    	$('#'+this.cid+ '_Button').html(text);
+	    	$('#'+this.cid+ '_Button').html("<div id='text'>"+text+"</div>");
 	    },
 	    setEvent: function(parent,method){
 	    	var that = this;
@@ -34,6 +34,16 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 	    setHoverOffState: function(){
 	    	
 	    },
+	    getId:function(){
+	    	return this.cid +"_Button";
+	    },
+	    setIcon: function(name){
+	    	var icon = new Icons();
+        	$("#"+this.getId()).append('<div class="bsm_icon" ><div id="icon'+this.cid+'"></div></div>');
+        	var elem = "icon"+this.cid;
+        	icon.renderByName(name,elem,"270-#fff:5-#AAA:100","#555");
+        	
+        },
 	    execFN : function(functionName, context, args) {
 			var args = Array.prototype.slice.call(arguments).splice(2);
 			var namespaces = functionName.split(".");
@@ -44,7 +54,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			return context[func].apply(this, args);
 		},
 	    html : function() {
-			var control = '<div id="' + this.cid + '_Button" class="bsm_Button"></div>';
+			var control = '<div id="' + this.cid + '_Button" class="bsm_Button" ></div>';
 			return control;
 		},
 		render : function(selector) {

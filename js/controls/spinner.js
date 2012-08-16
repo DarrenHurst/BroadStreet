@@ -18,9 +18,10 @@ define(['underscore', 'backbone'], function(_, Backbone) {
     	}else{
     	$('body').append('<div id="'+this.cid+'" class="bsm_spinner"></div>');	
     	}
+    	$("#"+this.cid).wrap('<div id="'+this.cid+'_wrap" class="bsm_overlay"></div>')
     },
     hideSpinner: function(){
-    	$("#"+ this.cid).remove();
+    	$("#"+ this.cid+"_wrap").remove();
     },
 	});
 	return SpinnerControl;

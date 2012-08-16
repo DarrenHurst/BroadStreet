@@ -10,8 +10,9 @@ define(['jquery',
 		'controls/scrollView',
 		'controls/picture',
 		'controls/button',
-		'controls/viewController/mainView'
-], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView){
+		'controls/viewController/mainView',
+		'icons/icons'
+], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView,Icons){
 
     var View = Backbone.View.extend({
 
@@ -44,10 +45,21 @@ define(['jquery',
         },
         createControls: function(){
         	
+        
+        	
+        	var icon = new Icons();
+        	var icon_array = icon.icons();
+        	for(x in icon_array){
+        	icon.render(icon_array[x],"controls_left2","#000","none");
+        	}
+        	
         	var Btn1 =  new Button().render("controls_right2");
         	Btn1.setText("go back to page 1");
         	Btn1.setEvent(this,"alertButton");
+        	Btn1.setIcon("arrowleftalt");
         	
+        	//TODO move icon render to control
+        	//icon.renderByName("arrowalt","icon","270-#fff:5-#AAA:100","#555");
         	
         },
         alertButton: function(e){
