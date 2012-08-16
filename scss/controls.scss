@@ -1,7 +1,7 @@
 @import "compass/css3";
 @import "compass/utilities";
 @import "transitions.css";
-$borderColor: #d5d5d5;
+$borderColor: #a3a3a3;
 $darkgrey:#929292;
 $backgroundColor:#fff;
 $minWidth:100%;
@@ -40,6 +40,10 @@ body{
 img{
   border:0px;
   
+}
+
+.bsm_page{
+
 }
 
 
@@ -357,21 +361,42 @@ vertical-align: top;
 ///paging
 .bsm_childpage{
   display:none;
+  padding:10px;
   position:absolute;
   width:100%;
-  height:100%;  
+   height:400px;
+   overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      & > * {
+          -webkit-transform: translateZ(0px); // fix for webkit scrolling/ relative bug
+      }
   
 }
 .bsm_Button{
-    margin:5px;
+    //margin:5px;
     display:inline-block;
-    padding:10px;
     min-width:10px;
     border:1px $borderColor solid;
     @include background-image($toggleon);
     color:#fff;
+    padding:9px;
     @include border-radius(10px); 
     min-width:40px;
+    margin:10px;
+    #text{
+      padding:10px;
+      display:inline;
+    }
+    .bsm_icon{
+      svg path{@include box-shadow(#333 0px 0px 10px);}
+      height:15px;
+      width:15px;
+      float:right;
+      padding-right:20px;
+      position:relative;
+      left:4px;
+      top:-5px;
+    }
 }
 .bsm_spinner{
    background :url("../css/images/controls/spinner.gif");
@@ -415,7 +440,7 @@ vertical-align: top;
        font-size:0.9em;
    }
 }
-.overlay{
+.bsm_overlay{
   position:fixed;
   width:100%;
   height:100%;
