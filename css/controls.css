@@ -472,18 +472,19 @@ expanding_invisible {
 /* line 362, ../scss/controls.scss */
 .bsm_childpage {
   display: none;
+  padding: 10px;
   position: absolute;
   width: 100%;
   height: 400px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-/* line 369, ../scss/controls.scss */
+/* line 370, ../scss/controls.scss */
 .bsm_childpage > * {
   -webkit-transform: translateZ(0px);
 }
 
-/* line 374, ../scss/controls.scss */
+/* line 375, ../scss/controls.scss */
 .bsm_Button {
   display: inline-block;
   min-width: 10px;
@@ -504,13 +505,13 @@ expanding_invisible {
   min-width: 40px;
   margin: 10px;
 }
-/* line 385, ../scss/controls.scss */
+/* line 386, ../scss/controls.scss */
 .bsm_Button #text {
   padding: 10px;
   display: inline;
 }
-/* line 389, ../scss/controls.scss */
-.bsm_Button #icon {
+/* line 390, ../scss/controls.scss */
+.bsm_Button .bsm_icon {
   height: 15px;
   width: 15px;
   float: right;
@@ -519,14 +520,14 @@ expanding_invisible {
   left: 4px;
   top: -5px;
 }
-/* line 390, ../scss/controls.scss */
-.bsm_Button #icon svg path {
+/* line 391, ../scss/controls.scss */
+.bsm_Button .bsm_icon svg path {
   -webkit-box-shadow: #333333 0px 0px 10px;
   -moz-box-shadow: #333333 0px 0px 10px;
   box-shadow: #333333 0px 0px 10px;
 }
 
-/* line 400, ../scss/controls.scss */
+/* line 401, ../scss/controls.scss */
 .bsm_spinner {
   background: url("../css/images/controls/spinner.gif");
   background-color: #000;
@@ -544,7 +545,7 @@ expanding_invisible {
   opacity: 0.8;
 }
 
-/* line 416, ../scss/controls.scss */
+/* line 417, ../scss/controls.scss */
 .bsm_spinner_with_text {
   background: url("../css/images/controls/spinner.gif");
   background-color: #000;
@@ -561,7 +562,7 @@ expanding_invisible {
   z-index: 9999999;
   opacity: 0.8;
 }
-/* line 431, ../scss/controls.scss */
+/* line 432, ../scss/controls.scss */
 .bsm_spinner_with_text .text {
   width: 100%;
   text-align: center;
@@ -572,8 +573,8 @@ expanding_invisible {
   font-size: 0.9em;
 }
 
-/* line 442, ../scss/controls.scss */
-.overlay {
+/* line 443, ../scss/controls.scss */
+.bsm_overlay {
   position: fixed;
   width: 100%;
   height: 100%;

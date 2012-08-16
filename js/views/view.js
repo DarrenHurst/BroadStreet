@@ -40,7 +40,7 @@ define(['jquery',
         },
         createControls: function(){
            
-        	var Spinner1 = new Spinner("a","Loading...");
+        	var Spinner1 = new Spinner("a");
         	Spinner1.showSpinner();
         	setTimeout(function(){
         		Spinner1.hideSpinner();
@@ -85,6 +85,7 @@ define(['jquery',
         	var Btn1 =  new Button().render("controls_right");
         	Btn1.setText("Click For Page 2");
         	Btn1.setEvent(this,"alertButton");
+        	Btn1.setIcon("arrowalt");
         	
         	
         },

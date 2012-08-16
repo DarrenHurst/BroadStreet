@@ -13,7 +13,11 @@ require.config({
       // Require.js Plugins
       text: "plugins/text-2.0.0",
       
-      raphael:'libs/raphael'
+      eve : 'libs/raphael/eve',
+     raphael : 'libs/raphael/raphael.amd',
+     raphaelcore : 'libs/raphael/raphael.core',
+     raphaelsvg : 'libs/raphael/raphael.svg',
+     raphaelvml : 'libs/raphael/raphael.vml',
 
   },
 
@@ -23,12 +27,7 @@ require.config({
       "backbone": {
           deps: ["underscore", "jquery"],
           exports: "Backbone"  //attaches "Backbone" to the window object
-      },
-       "raphael": {
-          deps: ["eve"],
-          exports: "raphael"  //attaches "Backbone" to the window object
       }
-
   } // end Shim Configuration
   
 });

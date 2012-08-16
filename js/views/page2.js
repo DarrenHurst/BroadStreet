@@ -56,9 +56,10 @@ define(['jquery',
         	var Btn1 =  new Button().render("controls_right2");
         	Btn1.setText("go back to page 1");
         	Btn1.setEvent(this,"alertButton");
+        	Btn1.setIcon("arrowleftalt");
         	
-        	$("#"+Btn1.getId()).append('<div id="icon"  ></div>')
-        	icon.renderByName("arrowalt","icon","270-#fff:5-#AAA:100","#555");
+        	//TODO move icon render to control
+        	//icon.renderByName("arrowalt","icon","270-#fff:5-#AAA:100","#555");
         	
         },
         alertButton: function(e){

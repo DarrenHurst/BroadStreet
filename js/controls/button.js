@@ -10,7 +10,7 @@
  *
  */
 
-define(['underscore', 'backbone'], function(_, Backbone) {
+define(['underscore', 'backbone','icons/icons'], function(_, Backbone,Icons) {
 
 	var ButtonControl = Backbone.View.extend({
 	    setText: function(text){
@@ -37,6 +37,13 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 	    getId:function(){
 	    	return this.cid +"_Button";
 	    },
+	    setIcon: function(name){
+	    	var icon = new Icons();
+        	$("#"+this.getId()).append('<div class="bsm_icon" ><div id="icon'+this.cid+'"></div></div>');
+        	var elem = "icon"+this.cid;
+        	icon.renderByName(name,elem,"270-#fff:5-#AAA:100","#555");
+        	
+        },
 	    execFN : function(functionName, context, args) {
 			var args = Array.prototype.slice.call(arguments).splice(2);
 			var namespaces = functionName.split(".");
