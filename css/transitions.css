@@ -1,141 +1,25 @@
 /* line 1, ../scss/transitions.scss */
+#container {
+  perspective: 800px;
+}
+
+/* line 5, ../scss/transitions.scss */
 .bsm_page {
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
 }
-
-/* line 6, ../scss/transitions.scss */
-.flip {
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateX(0);
-  -moz-backface-visibility: hidden;
-  -moz-transform: translateX(0);
-}
-
 /* line 12, ../scss/transitions.scss */
-.flip.out {
-  -webkit-transform: rotateY(-90deg) scale(0.9);
-  -webkit-animation-name: flipouttoleft;
-  -webkit-animation-duration: 175ms;
-  -moz-transform: rotateY(-90deg) scale(0.9);
-  -moz-animation-name: flipouttoleft;
-  -moz-animation-duration: 175ms;
+.bsm_page .bsm_childpage {
+  display: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
-
-/* line 20, ../scss/transitions.scss */
-.flip.in {
-  -webkit-animation-name: flipintoright;
-  -webkit-animation-duration: 225ms;
-  -moz-animation-name: flipintoright;
-  -moz-animation-duration: 225ms;
-}
-
-/* line 26, ../scss/transitions.scss */
-.flip.out.reverse {
-  -webkit-transform: rotateY(90deg) scale(0.9);
-  -webkit-animation-name: flipouttoright;
-  -moz-transform: rotateY(90deg) scale(0.9);
-  -moz-animation-name: flipouttoright;
-}
-
-/* line 32, ../scss/transitions.scss */
-.flip.in.reverse {
-  -webkit-animation-name: flipintoleft;
-  -moz-animation-name: flipintoleft;
-}
-
-@-webkit-keyframes flipouttoleft {
-  /* line 37, ../scss/transitions.scss */
-  from {
-    -webkit-transform: rotateY(0);
-  }
-
-  /* line 38, ../scss/transitions.scss */
-  to {
-    -webkit-transform: rotateY(-90deg) scale(0.9);
-  }
-}
-
-@-moz-keyframes flipouttoleft {
-  /* line 41, ../scss/transitions.scss */
-  from {
-    -moz-transform: rotateY(0);
-  }
-
-  /* line 42, ../scss/transitions.scss */
-  to {
-    -moz-transform: rotateY(-90deg) scale(0.9);
-  }
-}
-
-@-webkit-keyframes flipouttoright {
-  /* line 45, ../scss/transitions.scss */
-  from {
-    -webkit-transform: rotateY(0);
-  }
-
-  /* line 46, ../scss/transitions.scss */
-  to {
-    -webkit-transform: rotateY(90deg) scale(0.9);
-  }
-}
-
-@-moz-keyframes flipouttoright {
-  /* line 49, ../scss/transitions.scss */
-  from {
-    -moz-transform: rotateY(0);
-  }
-
-  /* line 50, ../scss/transitions.scss */
-  to {
-    -moz-transform: rotateY(90deg) scale(0.9);
-  }
-}
-
-@-webkit-keyframes flipintoleft {
-  /* line 53, ../scss/transitions.scss */
-  from {
-    -webkit-transform: rotateY(-90deg) scale(0.9);
-  }
-
-  /* line 54, ../scss/transitions.scss */
-  to {
-    -webkit-transform: rotateY(0);
-  }
-}
-
-@-moz-keyframes flipintoleft {
-  /* line 57, ../scss/transitions.scss */
-  from {
-    -moz-transform: rotateY(-90deg) scale(0.9);
-  }
-
-  /* line 58, ../scss/transitions.scss */
-  to {
-    -moz-transform: rotateY(0);
-  }
-}
-
-@-webkit-keyframes flipintoright {
-  /* line 61, ../scss/transitions.scss */
-  from {
-    -webkit-transform: rotateY(90deg) scale(0.9);
-  }
-
-  /* line 62, ../scss/transitions.scss */
-  to {
-    -webkit-transform: rotateY(0);
-  }
-}
-
-@-moz-keyframes flipintoright {
-  /* line 65, ../scss/transitions.scss */
-  from {
-    -moz-transform: rotateY(90deg) scale(0.9);
-  }
-
-  /* line 66, ../scss/transitions.scss */
-  to {
-    -moz-transform: rotateY(0);
-  }
+/* line 21, ../scss/transitions.scss */
+.bsm_page .flipped {
+  display: block;
+  transform: rotateY(180deg);
 }

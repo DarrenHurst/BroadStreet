@@ -1,4 +1,4 @@
-@import url(transitions.css);
+@import url(../css/transitions.css);
 @font-face {
   font-family: 'HelveticaNeue';
   src: url("./fonts/helveticaneueltstd-roman-webfont.eot");
@@ -529,15 +529,9 @@ expanding_invisible {
 
 /* line 401, ../scss/controls.scss */
 .bsm_spinner {
-  background: url("../css/images/controls/spinner.gif");
   background-color: #000;
-  height: 80px;
-  width: 80px;
-  padding: 5px;
+  padding: 15px;
   border-radius: 10px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 30px;
   position: fixed;
   top: 40%;
   left: 45%;
@@ -545,9 +539,8 @@ expanding_invisible {
   opacity: 0.8;
 }
 
-/* line 417, ../scss/controls.scss */
+/* line 412, ../scss/controls.scss */
 .bsm_spinner_with_text {
-  background: url("../css/images/controls/spinner.gif");
   background-color: #000;
   height: 80px;
   width: 80px;
@@ -562,7 +555,7 @@ expanding_invisible {
   z-index: 9999999;
   opacity: 0.8;
 }
-/* line 432, ../scss/controls.scss */
+/* line 427, ../scss/controls.scss */
 .bsm_spinner_with_text .text {
   width: 100%;
   text-align: center;
@@ -573,7 +566,7 @@ expanding_invisible {
   font-size: 0.9em;
 }
 
-/* line 443, ../scss/controls.scss */
+/* line 438, ../scss/controls.scss */
 .bsm_overlay {
   position: fixed;
   width: 100%;

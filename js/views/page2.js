@@ -64,7 +64,7 @@ define(['jquery',
         },
         alertButton: function(e){
         	console.log(e);
-        	e.parentView.page2.flipOut();
+        	e.parentView.page2.hide();
         	e.parentView.page1.slideDown();
         },
 
