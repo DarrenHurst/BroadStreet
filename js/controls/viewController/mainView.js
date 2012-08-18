@@ -22,17 +22,18 @@ define(['underscore', 'backbone',
 	var MainView = Backbone.View.extend({
 		
 		initialize : function() {
-		 
+		 this.onPage =0;
 		},
 		setPage:function(mainPage){
-			return new ChildView().render(mainPage.cid);
+			this.onPage +=1;
+			return new ChildView().render(mainPage);
 		},
 		getPage: function(){
 			return this.page;
 		},
 		render : function(parent) {
 			$(parent).append('<div id="'+this.cid+'" class="bsm_page"></div>');
-			
+			$("#"+this.cid).wrap("<div id='container'></div>")
 			return this;
 		}
 	});

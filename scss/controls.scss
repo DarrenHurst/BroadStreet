@@ -1,6 +1,6 @@
 @import "compass/css3";
 @import "compass/utilities";
-@import "transitions.css";
+@import "../css/transitions.css";
 $borderColor: #a3a3a3;
 $darkgrey:#929292;
 $backgroundColor:#fff;
@@ -399,15 +399,10 @@ vertical-align: top;
     }
 }
 .bsm_spinner{
-   background :url("../css/images/controls/spinner.gif");
+   //background :url("../css/images/controls/spinner.gif");
    background-color:#000;
-   height:80px;
-   width:80px;
-   padding:5px;
+   padding:15px;
    border-radius:10px;
-   background-repeat:no-repeat;
-   background-position:center; 
-   background-size:30px;
    position:fixed;
    top:40%;
    left:45%;
@@ -415,7 +410,7 @@ vertical-align: top;
    opacity:0.8;
 }
 .bsm_spinner_with_text{
-    background :url("../css/images/controls/spinner.gif");
+   //background :url("../css/images/controls/spinner.gif");
    background-color:#000;
    height:80px;
    width:80px;

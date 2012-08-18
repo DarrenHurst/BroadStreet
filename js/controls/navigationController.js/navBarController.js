@@ -2,10 +2,10 @@
 define(['underscore', 'backbone','controls/viewController/mainView'
 ], function(_, Backbone,MainView) {
 
-	var ChildView = Backbone.View.extend({
+	var NavBarView = Backbone.View.extend({
 		
 		setClass: function(name){
-			$("#"+this.cid).removeClass('bsm_childpage').addClass(name);
+			$("#"+this.cid).removeClass('bsm_NavBarpage').addClass(name);
 		},
 		setHtml: function(html){
 			$("#"+this.cid).html(html);
@@ -35,30 +35,22 @@ define(['underscore', 'backbone','controls/viewController/mainView'
 		slideUp: function(){
 			
 		},
-		hide: function(){
-			$("#"+this.cid).css({'display':'none'});
-		},
-		fadeOut: function(){
-			$("#"+this.cid).fadeOut();
-		},
 		flipIn: function(){
-			if (this.pageNum != 1){
-            	$("#"+this.cid).css({ "backface-visibility": "hidden",
-            						  "transform": "rotateY( 180deg ) "});
-            }
-		    $("#"+this.cid).addClass("flipped");
-		
+		    $("#"+this.cid).css({"display":"inline"});
+			$("#"+this.cid).addClass("flip.in");
+			$("#"+this.cid).removeClass("flip.out");
 		},
 		flipOut: function(){
-		     $("#"+this.cid).removeClass("flipped");
+		    $("#"+this.cid).css({"display":"none"});
+			$("#"+this.cid).addClass("flip.out");
+			$("#"+this.cid).removeClass("flip.in");
 		},
 		render : function(mainView) {
-			$("#"+mainView.cid).append('<div id="'+this.cid+'" class="bsm_childpage"></div>');
+			$("#"+mainView).append('<div id="'+this.cid+'" class="bsm_NavBarpage"></div>');
 			
-            this.pageNum = mainView.onPage;
-          
+
 			return this;
 		}
 	});
-	return ChildView;
+	return NavBarView;
 }); 

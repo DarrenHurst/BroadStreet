@@ -44,7 +44,7 @@ define(['jquery',
         	Spinner1.showSpinner();
         	setTimeout(function(){
         		Spinner1.hideSpinner();
-        	},1000);
+        	},2000);
         	
         	var Label1 = new Label("controls_right",this).render();
         	Label1.setTitle("Label");
@@ -91,8 +91,14 @@ define(['jquery',
         },
         alertButton: function(e){
         	console.log(e);
-        	e.page1.flipOut();
-        	e.page2.slideLeft();
+        		var Spinner1 = new Spinner("a");
+        	Spinner1.showSpinner("dots");
+        	setTimeout(function(){
+        		Spinner1.hideSpinner();
+        	},2000);
+        	e.page1.fadeOut();
+        	//e.page2.flipIn();
+       	    e.page2.slideRight();
         },
 
         events: {
@@ -116,7 +122,7 @@ define(['jquery',
             // page1.slideIn();
             // page1.slideRight();
             this.page1.slideLeft();
-           // this.page1.flipIn();
+            //this.page1.flipIn();
             
             
             //create the page2 in main View
