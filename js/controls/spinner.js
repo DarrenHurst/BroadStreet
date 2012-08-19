@@ -76,9 +76,13 @@ define(['underscore', 'backbone','raphael'], function(_, Backbone,Raphael) {
     	$('body').append('<div id="'+this.cid+'" class="bsm_spinner"></div>');	
     	}
     	if (type == "dots"){
-    	        this.spinner(this.cid, 17, 17, 15, 3, "#FFF");
-    	}else{
-    			this.spinner(this.cid, 10, 20, 15, 3, "#FFF");
+    	        this.spinner(this.cid, 19, 19, 12, 3, "#FFF");
+    	}
+    	else if (type == "bar"){
+    		  this.spinner(this.cid, 19, 19, 55, 6, "#FFF");
+    	}
+    	else{
+    			this.spinner(this.cid, 10, 20, 16, 3, "#FFF");
     	}
     	$("#"+this.cid).wrap('<div id="'+this.cid+'_wrap" class="bsm_overlay"></div>')
     },

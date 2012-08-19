@@ -37,9 +37,14 @@ define(['underscore', 'backbone','icons/icons'], function(_, Backbone,Icons) {
 	    getId:function(){
 	    	return this.cid +"_Button";
 	    },
-	    setIcon: function(name){
+	    setIcon: function(name,position){
+	    	
 	    	var icon = new Icons();
-        	$("#"+this.getId()).append('<div class="bsm_icon" ><div id="icon'+this.cid+'"></div></div>');
+        	if (position != undefined){
+        	 $("#"+this.getId()).append('<div class="bsm_iconleft" ><div id="icon'+this.cid+'"></div></div>');
+        	}else{
+        	  $("#"+this.getId()).append('<div class="bsm_icon" ><div id="icon'+this.cid+'"></div></div>');
+        	}
         	var elem = "icon"+this.cid;
         	icon.renderByName(name,elem,"270-#fff:5-#AAA:100","#555");
         	
