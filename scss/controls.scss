@@ -9,6 +9,8 @@ $padding:15px;
 
 $toggleon: linear-gradient(bottom , rgb(27,54,122) 0%,rgb(93,146,247) 100%);
 $toggleoff: linear-gradient(top , rgb(251,251,251) 0%,rgb(189,189,189) 100%);
+$blueBar: linear-gradient(top, #6FACD5  0%, #497BAE 100%);
+$greenBar: linear-gradient(top,#74B042 0%, #56A00E 100%);
 
 //$spinner:image-url("../css/images/controls/spinner.gif");
 
@@ -42,9 +44,6 @@ img{
   
 }
 
-.bsm_page{
-
-}
 
 
 
@@ -359,19 +358,7 @@ vertical-align: top;
 }
 
 ///paging
-.bsm_childpage{
-  display:none;
-  padding:10px;
-  position:absolute;
-  width:100%;
-   height:400px;
-   overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
-      & > * {
-          -webkit-transform: translateZ(0px); // fix for webkit scrolling/ relative bug
-      }
-  
-}
+
 .bsm_Button{
     //margin:5px;
     display:inline-block;
@@ -397,6 +384,17 @@ vertical-align: top;
       left:4px;
       top:-5px;
     }
+     .bsm_iconleft{
+      svg path{@include box-shadow(#333 0px 0px 10px);}
+      height:15px;
+      width:15px;
+      float:left;
+      padding-right:20px;
+      position:relative;
+      left:4px;
+      top:-5px;
+    }
+    
 }
 .bsm_spinner{
    //background :url("../css/images/controls/spinner.gif");

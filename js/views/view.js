@@ -12,8 +12,9 @@ define(['jquery',
 		'controls/button',
 		'controls/viewController/mainView',
 		'controls/spinner',
-		'views/page2'
-], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView,Spinner,Page2){
+		'views/page2',
+		'views/page3',
+], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView,Spinner,Page2,Page3){
 
     var View = Backbone.View.extend({
 
@@ -137,7 +138,10 @@ define(['jquery',
             
             
             
-            var page3 =  this.app.setPage(this.app);
+            this.page3 =  this.app.setPage(this.app);
+            var page3obj = new Page3(this);
+            this.page3.setHtml(page3obj.template);
+            page3obj.render();
              
             var page4 =  this.app.setPage(this.app);
                         
