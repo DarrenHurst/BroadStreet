@@ -63,6 +63,16 @@ define(['jquery',
         	//icon.renderByName("arrowalt","icon","270-#fff:5-#AAA:100","#555");
         	
         },
+         alertButton: function(e){
+        	var Spinner1 = new Spinner("a");
+        	Spinner1.showSpinner("bar");
+        	setTimeout(function(){
+        		Spinner1.hideSpinner();
+        	},2000);
+        	console.log(e);
+        	e.parentView.page2.fadeOut();
+        	e.parentView.page1.slideLeft();
+        },
         goToPage3: function(e){
         	var Spinner1 = new Spinner("a");
         	Spinner1.showSpinner("bar");

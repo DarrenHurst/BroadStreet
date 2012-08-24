@@ -9,6 +9,8 @@ $padding:15px;
 
 $toggleon: linear-gradient(bottom , rgb(27,54,122) 0%,rgb(93,146,247) 100%);
 $toggleoff: linear-gradient(top , rgb(251,251,251) 0%,rgb(189,189,189) 100%);
+$blueBar: linear-gradient(top, #6FACD5  0%, #497BAE 100%);
+$greenBar: linear-gradient(top,#74B042 0%, #56A00E 100%);
 
 //$spinner:image-url("../css/images/controls/spinner.gif");
 
@@ -42,9 +44,6 @@ img{
   
 }
 
-.bsm_page{
-
-}
 
 
 
@@ -109,6 +108,13 @@ vertical-align: top;
 
 
 }
+
+.bsm_emtcell_accountName {
+  display:inline-block;
+  font-weight:bold; 
+}
+
+
 /// input control
 
 .bsm-text-input{
@@ -336,13 +342,14 @@ vertical-align: top;
  }
  
 .bsm_scrollView{
-    //padding:$padding;
+    padding:5px;
+    margin:3px;
     border:1px $borderColor solid;
     background-color:$backgroundColor;
     @include border-radius(10px); 
     color:$darkgrey;
-    z-index:10;
-    min-height:100px;
+    //z-index:10;
+    //min-height:100px;
     height:100px;
     overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
@@ -351,20 +358,13 @@ vertical-align: top;
       }
 }
 
-///paging
-.bsm_childpage{
-  display:none;
-  padding:10px;
-  position:absolute;
-  width:100%;
-   height:400px;
-   overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
-      & > * {
-          -webkit-transform: translateZ(0px); // fix for webkit scrolling/ relative bug
-      }
-  
+///nuttons
+
+.bsm_Button:hover .bsm_Button:focus .bsm_Button.hover{
+  opacity:0.7;
+  @include background-image($toggleoff);
 }
+
 .bsm_Button{
     //margin:5px;
     display:inline-block;
@@ -390,6 +390,17 @@ vertical-align: top;
       left:4px;
       top:-5px;
     }
+     .bsm_iconleft{
+      svg path{@include box-shadow(#333 0px 0px 10px);}
+      height:15px;
+      width:15px;
+      float:left;
+      padding-right:20px;
+      position:relative;
+      left:4px;
+      top:-5px;
+    }
+    
 }
 .bsm_spinner{
    //background :url("../css/images/controls/spinner.gif");
@@ -430,7 +441,225 @@ vertical-align: top;
 }
 .bsm_overlay{
   position:fixed;
+  top:0px;
+  left:0px;
   width:100%;
   height:100%;
   z-index:9999998;
 }
+
+
+//popups
+
+menu{
+    z-index:9999999;
+  .pop {
+  position:relative;
+  border: solid 2px #6a6a6a;
+  margin: 0px;
+  padding:0px;
+  font: normal 14px/16px Helvetica, Sans-serif;
+  //display:none;
+    z-index:9999999;
+  //position:fixed;
+  //bottom:40px;
+  //right:20px;
+  width: 300px;
+  background-color: #121a2e;
+  //border: solid 1px #4f4f4f;
+  display:block;
+  -webkit-padding-start: 0px;
+  -webkit-border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 10px #000;
+  margin: 5px 5px 5px 5px !important;
+ 
+  .menuHandle {
+      position: absolute;
+      top: -15px;
+      left: 10px;
+      height: 30px !important;
+      width: 30px;
+      border: solid 2px #6a6a6a;
+      border-bottom: none;
+      border-right: none;
+      background-color: #7d828c !important;
+      /* Mask Image Complete NOT YET */
+      -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, from(#000000), color-stop(0.5,#000000), color-stop(0.5, #000000), to(#000000));
+      -o-mask-image: url(http://campfiresites.com/prototypes/images/bg-heading-orange-grid.png);
+      -moz-mask-image: url(http://campfiresites.com/prototypes/images/bg-heading-orange-grid.png);
+      mask-image: url(http://campfiresites.com/prototypes/images/bg-heading-orange-grid.png);     
+
+      /* Rotate Complete */
+      transform: rotate(45deg);
+      -ms-transform: rotate(45deg); /* IE 9 */
+      -webkit-transform: rotate(45deg); /* Safari and Chrome */
+      -o-transform: rotate(45deg); /* Opera */
+      -moz-transform: rotate(45deg); /* Firefox */    
+  }
+  .menuHandleDown {
+      position: absolute;
+      bottom: -17px;
+      left: 10px;
+      height: 30px !important;
+      width: 30px;
+      border: solid 2px #6a6a6a;
+      border-top: none;
+      border-left: none;
+      background-color: #121a2e !important;
+      /* Mask Image Complete NOT YET */
+      -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, from(#000000), color-stop(0.5,#000000), color-stop(0.5, #000000), to(#000000));
+      -o-mask-image: url(http://campfiresites.com/prototypes/images/bg-heading-orange-grid.png);
+      -moz-mask-image: url(http://campfiresites.com/prototypes/images/bg-heading-orange-grid.png);
+      mask-image: url(http://campfiresites.com/prototypes/images/bg-heading-orange-grid.png);     
+
+      /* Rotate Complete */
+      transform: rotate(45deg);
+      -ms-transform: rotate(45deg); /* IE 9 */
+      -webkit-transform: rotate(45deg); /* Safari and Chrome */
+      -o-transform: rotate(45deg); /* Opera */
+      -moz-transform: rotate(45deg); /* Firefox */    
+       -webkit-box-shadow: 0px 5px 10px #000;
+      }
+  .popdiv {
+      //min-height:150px;
+      display:inline-block;
+      position:relative;
+      //top:-27px;
+      z-index:5;
+      padding:3px;
+      background-color: #e5e5e5;
+      margin: 3px 3px 10px 3px !important;
+      -webkit-border-radius: 5px;
+    
+    .content {
+      margin:2px;
+      height:100%;
+     // display:inline-block;
+     // min-height:110px;
+     // height:110px;
+      //padding-top:10px;
+     // padding-bottom:10px;
+      //height:240px;
+    }
+    .control{ 
+      //margin:12px;
+      //padding:5px;
+     // display:inline;
+      //padding-top:10px;
+      overflow:hidden;
+      //padding-bottom:10px;
+      //height:110px;
+    }
+    .text {
+      background-color:#fff !important;
+       -webkit-overflow-scrolling: touch;
+       & > * {
+        -webkit-transform: translateZ(0px); // fix for webkit scrolling/ relative bug
+      }
+      border:1px #aaa solid;
+      //height: 248px;      
+      -webkit-border-radius: 15px;
+      -webkit-box-shadow: inset 0px 0.9px 1px rgba(125,130,140,1);
+      color:#000;
+      font-size:16px;
+      font-weight:normal;
+      margin-top:9px;
+      padding:10px;
+      background-color:#FFFFFF;
+      border:1px #aaa solid;
+      @include border-radius(5px);      
+    }
+  }
+  }
+  header {
+    display:block;
+    border-top:none;
+    position:relative;
+    height: 40px;
+    padding: 0px 10px;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7d828c),color-stop(0.5, #303749), color-stop(0.5, #121a2e), to(#121a2e));
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    //position: relative;
+    //top:-36px;
+    z-index:5;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+    
+    //-webkit-box-shadow: 0 5px 4px -4px black;
+
+    h3 {
+      margin: 0px;
+      margin-bottom: 10px;
+      color: #fff;
+      font-size: 20px;
+      line-height: 40px;
+      display: block;
+      -webkit-box-flex: 1;
+      text-align: center;
+      font-weight: bold;
+    }
+    .button
+    {
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: bold;
+      margin: 0 auto;
+      -webkit-border-radius: 5px;
+    }
+    .button.blue
+    {
+      background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4286f5), to(#194fdb));
+      border: solid 1px rgba(25, 79, 219, 0.25);
+      -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+    }
+    .button.blue:hover, .button.blue.hover {
+      -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5), inset 0px 0px 2px rgba(255, 255, 255, 0.25), inset 0px 0px 2px rgba(0, 0, 0, 0.25);
+      padding: 5px 9px 3px 11px;
+    }
+    .button.black {
+      background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7d828c),color-stop(0.5, #303749), color-stop(0.5, #121a2e), to(#121a2e));
+      border: solid 1px rgba(79, 79, 79, 0.75);
+    }
+    .button.black:hover, .button.black:focus, .button.black.hover {
+      //padding-left:-20px;
+      background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#121A2E), color-stop(0.5, #121A2E), color-stop(0.5, #000000), to(#000000));
+      color: #fff;
+    }
+    .button
+    {
+      margin-top: 6px;
+    }
+    .button.back {
+      position: relative;
+      //padding-left: 5px;
+     // margin-left: 8px;
+    }
+    .back.black > .pointer {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(#7d828c),color-stop(0.5, #303749), color-stop(0.5, #121a2e), to(#121a2e));
+      border-left: solid 1px rgba(79, 79, 79, 0.75);
+      border: solid 1px rgba(79, 79, 79, 0.75);
+      -webkit-border-top-left-radius: 6px;
+      -webkit-border-bottom-right-radius: 6px;
+      height: 19px;
+      width: 19px;
+      display: inline-block;
+      -webkit-transform: rotate(45deg);
+      -webkit-mask-image: -webkit-gradient(linear, left bottom, right top, from(#000000), color-stop(0.5,#000000), color-stop(0.5, transparent), to(transparent));
+      position: absolute;
+      left: -7px;
+      top: 1px;
+      -webkit-background-clip: content
+    }
+    .back:hover .pointer, .back.hover .pointer {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(#4286f5), color-stop(0.5, #4286f5), color-stop(0.5, #194fdb), to(#194fdb));
+    }    
+  
+  }   
+ }
+
+
