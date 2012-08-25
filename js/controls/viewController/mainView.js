@@ -23,13 +23,22 @@ define(['underscore', 'backbone',
 		
 		initialize : function() {
 		 this.onPage =0;
+		 this.pageArray = new Array();
+		 
 		},
-		setPage:function(mainPage){
+		setPage:function(Page){
 			this.onPage +=1;
-			return new ChildView().render(mainPage);
+			var child = new ChildView().render(Page); 
+			this.pageArray.push(child);
+			return child
 		},
 		getPage: function(){
 			return this.page;
+		},
+		hideAll: function(){
+			for(x in this.pageArray){
+				this.pageArray[x].fadeOut();
+			}
 		},
 		render : function(parent) {
 			$(parent).append('<div id="'+this.cid+'" class="bsm_page"></div>');

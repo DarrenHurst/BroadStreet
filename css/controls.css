@@ -470,17 +470,12 @@ expanding_invisible {
 }
 
 /* line 363, ../scss/controls.scss */
-.bsm_Button:hover .bsm_Button:focus .bsm_Button.hover {
-  opacity: 0.7;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fbfbfb), color-stop(100%, #bdbdbd));
-  background-image: -webkit-linear-gradient(top, #fbfbfb 0%, #bdbdbd 100%);
-  background-image: -moz-linear-gradient(top, #fbfbfb 0%, #bdbdbd 100%);
-  background-image: -o-linear-gradient(top, #fbfbfb 0%, #bdbdbd 100%);
-  background-image: -ms-linear-gradient(top, #fbfbfb 0%, #bdbdbd 100%);
-  background-image: linear-gradient(top, #fbfbfb 0%, #bdbdbd 100%);
+.bsm_Button:hover, .bsm_Button:focus, .bsm_Button.hover {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#121a2e), color-stop(0.5, #121a2e), color-stop(0.5, black), to(black));
+  color: #fff;
 }
 
-/* line 368, ../scss/controls.scss */
+/* line 369, ../scss/controls.scss */
 .bsm_Button {
   display: inline-block;
   min-width: 10px;
@@ -501,12 +496,12 @@ expanding_invisible {
   min-width: 40px;
   margin: 10px;
 }
-/* line 379, ../scss/controls.scss */
+/* line 380, ../scss/controls.scss */
 .bsm_Button #text {
   padding: 10px;
   display: inline;
 }
-/* line 383, ../scss/controls.scss */
+/* line 384, ../scss/controls.scss */
 .bsm_Button .bsm_icon {
   height: 15px;
   width: 15px;
@@ -516,13 +511,13 @@ expanding_invisible {
   left: 4px;
   top: -5px;
 }
-/* line 384, ../scss/controls.scss */
+/* line 385, ../scss/controls.scss */
 .bsm_Button .bsm_icon svg path {
   -webkit-box-shadow: #333333 0px 0px 10px;
   -moz-box-shadow: #333333 0px 0px 10px;
   box-shadow: #333333 0px 0px 10px;
 }
-/* line 393, ../scss/controls.scss */
+/* line 394, ../scss/controls.scss */
 .bsm_Button .bsm_iconleft {
   height: 15px;
   width: 15px;
@@ -532,14 +527,14 @@ expanding_invisible {
   left: 4px;
   top: -5px;
 }
-/* line 394, ../scss/controls.scss */
+/* line 395, ../scss/controls.scss */
 .bsm_Button .bsm_iconleft svg path {
   -webkit-box-shadow: #333333 0px 0px 10px;
   -moz-box-shadow: #333333 0px 0px 10px;
   box-shadow: #333333 0px 0px 10px;
 }
 
-/* line 405, ../scss/controls.scss */
+/* line 406, ../scss/controls.scss */
 .bsm_spinner {
   background-color: #000;
   padding: 15px;
@@ -551,7 +546,7 @@ expanding_invisible {
   opacity: 0.8;
 }
 
-/* line 416, ../scss/controls.scss */
+/* line 417, ../scss/controls.scss */
 .bsm_spinner_with_text {
   background-color: #000;
   height: 80px;
@@ -567,7 +562,7 @@ expanding_invisible {
   z-index: 9999999;
   opacity: 0.8;
 }
-/* line 431, ../scss/controls.scss */
+/* line 432, ../scss/controls.scss */
 .bsm_spinner_with_text .text {
   width: 100%;
   text-align: center;
@@ -578,7 +573,7 @@ expanding_invisible {
   font-size: 0.9em;
 }
 
-/* line 442, ../scss/controls.scss */
+/* line 443, ../scss/controls.scss */
 .bsm_overlay {
   position: fixed;
   top: 0px;
@@ -588,11 +583,11 @@ expanding_invisible {
   z-index: 9999998;
 }
 
-/* line 454, ../scss/controls.scss */
+/* line 455, ../scss/controls.scss */
 menu {
   z-index: 9999999;
 }
-/* line 456, ../scss/controls.scss */
+/* line 457, ../scss/controls.scss */
 menu .pop {
   position: relative;
   border: solid 2px #6a6a6a;
@@ -608,7 +603,7 @@ menu .pop {
   -webkit-box-shadow: 0px 5px 10px #000;
   margin: 5px 5px 5px 5px !important;
 }
-/* line 476, ../scss/controls.scss */
+/* line 477, ../scss/controls.scss */
 menu .pop .menuHandle {
   position: absolute;
   top: -15px;
@@ -635,7 +630,7 @@ menu .pop .menuHandle {
   -moz-transform: rotate(45deg);
   /* Firefox */
 }
-/* line 499, ../scss/controls.scss */
+/* line 500, ../scss/controls.scss */
 menu .pop .menuHandleDown {
   position: absolute;
   bottom: -17px;
@@ -663,7 +658,7 @@ menu .pop .menuHandleDown {
   /* Firefox */
   -webkit-box-shadow: 0px 5px 10px #000;
 }
-/* line 523, ../scss/controls.scss */
+/* line 524, ../scss/controls.scss */
 menu .pop .popdiv {
   display: inline-block;
   position: relative;
@@ -673,16 +668,16 @@ menu .pop .popdiv {
   margin: 3px 3px 10px 3px !important;
   -webkit-border-radius: 5px;
 }
-/* line 534, ../scss/controls.scss */
+/* line 535, ../scss/controls.scss */
 menu .pop .popdiv .content {
   margin: 2px;
   height: 100%;
 }
-/* line 544, ../scss/controls.scss */
+/* line 545, ../scss/controls.scss */
 menu .pop .popdiv .control {
   overflow: hidden;
 }
-/* line 553, ../scss/controls.scss */
+/* line 554, ../scss/controls.scss */
 menu .pop .popdiv .text {
   background-color: #fff !important;
   -webkit-overflow-scrolling: touch;
@@ -702,11 +697,11 @@ menu .pop .popdiv .text {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 556, ../scss/controls.scss */
+/* line 557, ../scss/controls.scss */
 menu .pop .popdiv .text > * {
   -webkit-transform: translateZ(0px);
 }
-/* line 574, ../scss/controls.scss */
+/* line 575, ../scss/controls.scss */
 menu header {
   display: block;
   border-top: none;
@@ -721,7 +716,7 @@ menu header {
   -webkit-box-orient: horizontal;
   -webkit-box-align: stretch;
 }
-/* line 592, ../scss/controls.scss */
+/* line 593, ../scss/controls.scss */
 menu header h3 {
   margin: 0px;
   margin-bottom: 10px;
@@ -733,7 +728,7 @@ menu header h3 {
   text-align: center;
   font-weight: bold;
 }
-/* line 604, ../scss/controls.scss */
+/* line 605, ../scss/controls.scss */
 menu header .button {
   color: #fff;
   text-decoration: none;
@@ -744,36 +739,36 @@ menu header .button {
   margin: 0 auto;
   -webkit-border-radius: 5px;
 }
-/* line 615, ../scss/controls.scss */
+/* line 616, ../scss/controls.scss */
 menu header .button.blue {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4286f5), to(#194fdb));
   border: solid 1px rgba(25, 79, 219, 0.25);
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
 }
-/* line 620, ../scss/controls.scss */
+/* line 621, ../scss/controls.scss */
 menu header .button.blue:hover, menu header .button.blue.hover {
   -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5), inset 0px 0px 2px rgba(255, 255, 255, 0.25), inset 0px 0px 2px rgba(0, 0, 0, 0.25);
   padding: 5px 9px 3px 11px;
 }
-/* line 624, ../scss/controls.scss */
+/* line 625, ../scss/controls.scss */
 menu header .button.black {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7d828c), color-stop(0.5, #303749), color-stop(0.5, #121a2e), to(#121a2e));
   border: solid 1px rgba(79, 79, 79, 0.75);
 }
-/* line 628, ../scss/controls.scss */
+/* line 629, ../scss/controls.scss */
 menu header .button.black:hover, menu header .button.black:focus, menu header .button.black.hover {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#121a2e), color-stop(0.5, #121a2e), color-stop(0.5, black), to(black));
   color: #fff;
 }
-/* line 634, ../scss/controls.scss */
+/* line 635, ../scss/controls.scss */
 menu header .button {
   margin-top: 6px;
 }
-/* line 637, ../scss/controls.scss */
+/* line 638, ../scss/controls.scss */
 menu header .button.back {
   position: relative;
 }
-/* line 642, ../scss/controls.scss */
+/* line 643, ../scss/controls.scss */
 menu header .back.black > .pointer {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#7d828c), color-stop(0.5, #303749), color-stop(0.5, #121a2e), to(#121a2e));
   border-left: solid 1px rgba(79, 79, 79, 0.75);
@@ -790,7 +785,61 @@ menu header .back.black > .pointer {
   top: 1px;
   -webkit-background-clip: content;
 }
-/* line 658, ../scss/controls.scss */
+/* line 659, ../scss/controls.scss */
 menu header .back:hover .pointer, menu header .back.hover .pointer {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#4286f5), color-stop(0.5, #4286f5), color-stop(0.5, #194fdb), to(#194fdb));
+}
+
+/* line 666, ../scss/controls.scss */
+.bsm_navbar {
+  position: fixed;
+  bottom: 0px;
+  padding-right: 15px;
+  display: block;
+  border-top: none;
+  width: 100%;
+  height: 60px;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7d828c), color-stop(0.5, #303749), color-stop(0.5, #121a2e), to(#121a2e));
+  z-index: 9999;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+}
+/* line 680, ../scss/controls.scss */
+.bsm_navbar .nav_container {
+  margin: 0 auto;
+}
+/* line 686, ../scss/controls.scss */
+.bsm_navbar .nav_container .bsm_navButton:hover, .bsm_navbar .nav_container .bsm_navButton:focus, .bsm_navbar .nav_container .bsm_navButton.hover {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#121a2e), color-stop(0.5, #121a2e), color-stop(0.5, black), to(black));
+  color: #fff;
+}
+/* line 692, ../scss/controls.scss */
+.bsm_navbar .nav_container .bsm_navButton {
+  height: 60px;
+  padding: 2px;
+  margin: 1px;
+  display: inline-block;
+  border: solid 1px rgba(79, 79, 79, 0.75);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  background-image: -webkit-gradient(linear, from(#7d828c), color-stop(0.5, #303749), color-stop(0.5, #121a2e), to(#121a2e));
+  margin: 0 auto;
+}
+/* line 702, ../scss/controls.scss */
+.bsm_navbar .nav_container .bsm_navButton .icon {
+  color: #fff;
+  padding-left: 30px;
+  margin: 0 auto;
+  display: block;
+  width: 60px;
+}
+/* line 712, ../scss/controls.scss */
+.bsm_navbar .nav_container .bsm_navButton .text {
+  opacity: 0.7;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  position: relative;
+  top: -22px;
+  margin: 0 auto;
 }
