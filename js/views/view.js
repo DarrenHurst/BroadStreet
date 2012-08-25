@@ -14,7 +14,8 @@ define(['jquery',
 		'controls/spinner',
 		'views/page2',
 		'views/page3',
-], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView,Spinner,Page2,Page3){
+		'controls/navigationController/navBarController',
+], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView,Spinner,Page2,Page3,NavBar){
 
     var View = Backbone.View.extend({
 
@@ -89,6 +90,16 @@ define(['jquery',
         	Btn1.setIcon("arrowalt");
         	
         	
+        	
+        },
+        navBar: function(){
+        	
+        	//  nav : nav to a new MainView or to a childView in Mainview scope"
+        	//  link : nav to any other link
+        	this.navbar = new NavBar().render(this.app); // set the start location;
+        	this.navbar.addButton("gear","Settings",{"nav":this.page2});
+        	this.navbar.addButton("video","Video",{"nav":this.page3});
+        	this.navbar.addButton("githubalt","GitHub",{"link":"https://github.com/DarrenHurst/BroadStreet"});
         },
         alertButton: function(e){
         	console.log(e);
@@ -148,6 +159,8 @@ define(['jquery',
 
             //controls should be in MainView() but for sake of demoing paging they are here
             this.createControls();
+            
+            this.navBar();
 
         },
 
