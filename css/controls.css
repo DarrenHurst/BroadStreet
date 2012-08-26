@@ -680,7 +680,6 @@ menu .pop .popdiv .control {
 /* line 554, ../scss/controls.scss */
 menu .pop .popdiv .text {
   background-color: #fff !important;
-  -webkit-overflow-scrolling: touch;
   border: 1px #aaa solid;
   -webkit-border-radius: 15px;
   -webkit-box-shadow: inset 0px 0.9px 1px #7d828c;
@@ -696,10 +695,6 @@ menu .pop .popdiv .text {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-}
-/* line 557, ../scss/controls.scss */
-menu .pop .popdiv .text > * {
-  -webkit-transform: translateZ(0px);
 }
 /* line 575, ../scss/controls.scss */
 menu header {

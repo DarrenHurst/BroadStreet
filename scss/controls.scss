@@ -553,10 +553,10 @@ menu{
     }
     .text {
       background-color:#fff !important;
-       -webkit-overflow-scrolling: touch;
-       & > * {
-        -webkit-transform: translateZ(0px); // fix for webkit scrolling/ relative bug
-      }
+     //  -webkit-overflow-scrolling: touch;
+      // & > * {
+       // -webkit-transform: translateZ(0px); // fix for webkit scrolling/ relative bug
+     // }
       border:1px #aaa solid;
       //height: 248px;      
       -webkit-border-radius: 15px;

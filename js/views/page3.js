@@ -52,8 +52,8 @@ define(['jquery',
             this.Popup1 = new Popup("controls_left3");
             this.Popup1.render();
             var Popup_Control =  this.Popup1.isControl();
-            this.Popup1.setPointer(257);
-            this.Popup1.setPosition(20,97);
+            this.Popup1.setPointer(23);
+            this.Popup1.setPosition(30,30);
             //alert(Popup_Control);
             var ScrollView1 = new ScrollView(Popup_Control,this).render();
            
@@ -67,7 +67,7 @@ define(['jquery',
             this.Popup2 = new Popup("controls_left3");
             this.Popup2.render("top"); // top is handle pointer on top.
             this.Popup2.setContent("This is just a text popup and takes html or text");
-            this.Popup2.setPosition(260,97);
+            this.Popup2.setPosition(300,247);
              
           
          
