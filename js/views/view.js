@@ -101,6 +101,7 @@ define(['jquery',
         	this.navbar.addButton("video","page3 nav example",{"nav":this.page3});
         	this.navbar.addButton("githubalt","GitHub",{"link":"https://github.com/DarrenHurst/BroadStreet"});
         	this.navbar.addButton("linkedin","LinkedIn",{"link":"http://ca.linkedin.com/pub/darren-hurst/23/299/149"});
+     		this.navbar.addButton("twitter","Twitter",{"link":"https://twitter.com/ITS_A_NERD"});
         },
         alertButton: function(e){
         	console.log(e);
