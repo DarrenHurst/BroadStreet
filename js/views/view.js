@@ -97,9 +97,11 @@ define(['jquery',
         	//  nav : nav to a new MainView or to a childView in Mainview scope"
         	//  link : nav to any other link
         	this.navbar = new NavBar().render(this.app); // set the start location;
-        	this.navbar.addButton("gear","Settings",{"nav":this.page2});
-        	this.navbar.addButton("video","Video",{"nav":this.page3});
+        	this.navbar.addButton("gear","page2 nav example",{"nav":this.page2});
+        	this.navbar.addButton("video","page3 nav example",{"nav":this.page3});
         	this.navbar.addButton("githubalt","GitHub",{"link":"https://github.com/DarrenHurst/BroadStreet"});
+        	this.navbar.addButton("linkedin","LinkedIn",{"link":"http://ca.linkedin.com/pub/darren-hurst/23/299/149"});
+     		this.navbar.addButton("twitter","Twitter",{"link":"https://twitter.com/ITS_A_NERD"});
         },
         alertButton: function(e){
         	console.log(e);
