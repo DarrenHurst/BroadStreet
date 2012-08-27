@@ -37,11 +37,19 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 				"height":height
 			});
 		},
+		setWidth: function(width){
+			$("#" + this.id + "_scrollView").css({
+				"width":width
+			});
+		},
 		getscrollView : function() {
 			return $("#" + this.id + "_scrollView").html();
 		},
 		id : function() {
 			return this.el();
+		},
+		getId:function(){
+			return this.id + '_scrollView';
 		},
 		html : function() {
 			var control = '<div id="' + this.id + '_scrollView" class="bsm_scrollView"></div>';

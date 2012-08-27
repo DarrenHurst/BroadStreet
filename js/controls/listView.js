@@ -32,7 +32,8 @@ define(['underscore', 'backbone','icons/icons'], function(_, Backbone,Icons) {
         	//icon.renderByName(name,elem,"270-#fff:5-#AAA:100","#555");
         	
         },
-        addRow: function(){
+        addRow: function(html){
+        	$("#"+this.cid+ '_List').append('<div class="item">'+html+'</div>');
         	
         },
 	    execFN : function(functionName, context, args) {

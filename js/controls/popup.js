@@ -2,8 +2,9 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 
 	var PopupControl = Backbone.View.extend({
 		
-	initialize: function(parent){
+	initialize: function(parent,title){
 		this.parent = parent;
+		this.title = title;
 	},	
 	
 	setEvent: function(parent,method){
@@ -40,7 +41,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			  					 
 	},
 	setHeader: function(){
-		$('#'+this.cid+"_pop").append('<header><a class="button back black">back</a><h3>title</h3><a id="'+this.cid+'_buttonRight" class="button close black closeBtn">close</a></header>')
+		$('#'+this.cid+"_pop").append('<header><a class="button back black">back</a><h3>'+this.title+'</h3><a id="'+this.cid+'_buttonRight" class="button close black closeBtn">close</a></header>')
 	},
 	isControl: function(){
 		$('#'+this.cid+"_pop").append("<div id='"+this.cid+"_popdiv' class='popdiv'><div id='"+this.cid+"_popupControl' class='control'></div></div>");

@@ -12,8 +12,10 @@ define(['jquery',
 		'controls/button',
 		'controls/viewController/mainView',
 		'controls/popup',
-		'icons/icons'
-], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView,Popup,Icons){
+		'icons/icons',
+		'models/twitter',
+		'controls/listview'
+], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView,Popup,Icons,Twitter,listView){
 
     var View = Backbone.View.extend({
 
@@ -44,27 +46,44 @@ define(['jquery',
         	var AlertControl = new Alert;
         	AlertControl.setAlert(" your name is "+e.getVal());
         },
+        buildTweets: function(data){
+        	console.log(data);
+            var list = new listView().render(this.ScrollView1.getId());
+            for(x in data){
+            	//console.log(data[x].text);
+            	
+            	list.addRow(this.buildTweetBlock(data[x])); 
+            }
+        },
+        replaceURLWithHTMLLinks: function(text) {
+   		    var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+ 	   		return text.replace(exp,"<a href='$1'>$1</a>"); 
+		},
+        buildTweetBlock: function(data){
+        	var pic = data.user.profile_image_url;
+        	var text = this.replaceURLWithHTMLLinks(data.text);
+        	return '<div class="img"><img src="'+pic+'" /></div><div class="text" >'+text+'</div>';
+        	
+        },
         createControls: function(){
         	
         	
         	
-        	
-            this.Popup1 = new Popup("controls_left3");
+            this.Popup1 = new Popup("controls_left3","Tweets");
             this.Popup1.render();
             var Popup_Control =  this.Popup1.isControl();
             this.Popup1.setPointer(23);
             this.Popup1.setPosition(30,30);
             //alert(Popup_Control);
-            var ScrollView1 = new ScrollView(Popup_Control,this).render();
-           
-            ScrollView1.setHtml("<p>This is a scrollView inside a popup control.</p>"+
-			"If you would like to contribute please contact me. If you like what you see. Star or Watch the Repo."+
-			"<br/"+
-			"Suggestions are welcome!"+
-			"Thank you for checking us out!<br/> I could add a whole lot of text in here to make it scroll, but instead i decided that if I told you, it would most likely be enough text to demonstrate that the control does infact scroll.");
-        	ScrollView1.setHeight("100");
+            this.ScrollView1 = new ScrollView(Popup_Control,this).render();
+            
+            //this.ScrollView1.setHtml();
+        	this.ScrollView1.setHeight("300");
+            
+            this.twitter = new Twitter(this);
         
-            this.Popup2 = new Popup("controls_left3");
+            
+            this.Popup2 = new Popup("controls_left3","Just Text");
             this.Popup2.render("top"); // top is handle pointer on top.
             this.Popup2.setContent("This is just a text popup and takes html or text");
             this.Popup2.setPosition(300,247);
