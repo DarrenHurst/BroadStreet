@@ -13,11 +13,15 @@ define([
     },
     getData: function(){
     	var that = this;
-    	$.getJSON(this.url(),function(data){
-    		
-    		that.twitterStream = data;
+      $.ajax({
+          url: that.url(),
+          dataType: "jsonp",
+          jsonpCallback: that.sendData()
+       });
+    },
+    sendData: function(data){
+        that.twitterStream = data;
     		that.caller.buildTweets(that.twitterStream);
-    	});
     },
     // Because twitter doesn't return an array of models by default we need
     // to point Backbone.js at the correct property
