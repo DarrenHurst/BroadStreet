@@ -14,17 +14,19 @@ define([
     getData: function(){
     	var that = this;
       $.ajax({
-          url: "http://twitter.com/statuses/user_timeline/ITS_A_NERD.json?callback=?",
-          dataType: "jsonp",
-          jsonpCallback:"gotData"
-       });
-       
+      	url: that.url(),
+    type: 'GET',
+    crossDomain: true,
+    dataType: 'json',
+    success: function(data) {	
+    	console.log(data);
+       	that.twitterStream = data;
+        that.caller.buildTweets(that.twitterStream);},
+    error: function() { alert('Failed!'); }
+    });
+         
     },
-    gotData: function(data){
-       	console.log(data);
-       	this.twitterStream = data;
-        this.caller.buildTweets(this.twitterStream);
-      },
+ 
     // Because twitter doesn't return an array of models by default we need
     // to point Backbone.js at the correct property
     parse: function(resp, xhr) {
