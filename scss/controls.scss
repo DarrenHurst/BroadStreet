@@ -9,6 +9,7 @@ $padding:15px;
 
 $toggleon: linear-gradient(bottom , rgb(27,54,122) 0%,rgb(93,146,247) 100%);
 $toggleoff: linear-gradient(top , rgb(251,251,251) 0%,rgb(189,189,189) 100%);
+$listview: linear-gradient(top , rgb(255,255,255) 0%,rgb(199,199,199) 100%);
 $blueBar: linear-gradient(top, #6FACD5  0%, #497BAE 100%);
 $greenBar: linear-gradient(top,#74B042 0%, #56A00E 100%);
 
@@ -551,25 +552,7 @@ menu{
       //padding-bottom:10px;
       //height:110px;
     }
-    .text {
-      background-color:#fff !important;
-       -webkit-overflow-scrolling: touch;
-       & > * {
-        -webkit-transform: translateZ(0px); // fix for webkit scrolling/ relative bug
-      }
-      border:1px #aaa solid;
-      //height: 248px;      
-      -webkit-border-radius: 15px;
-      -webkit-box-shadow: inset 0px 0.9px 1px rgba(125,130,140,1);
-      color:#000;
-      font-size:16px;
-      font-weight:normal;
-      margin-top:9px;
-      padding:10px;
-      background-color:#FFFFFF;
-      border:1px #aaa solid;
-      @include border-radius(5px);      
-    }
+   
   }
   }
   header {
@@ -722,4 +705,28 @@ menu{
     }
  }
 
-
+.bsm_List{
+  .item{
+    min-height:70px;
+   @include background($listview);
+   .img{
+     height:100%;
+     vertical-align:center;
+     max-width:60px;
+     display:inline;
+     margin:3px;
+     margin-right:5px;
+     float:left;
+   }
+   .text{
+     color:#232323;
+     margin-left:54px;
+     text-align:left;
+     padding:3px;
+     font-size:13px;
+     font-weight:normal;
+     //vertical-align:top;
+    // display:inline; 
+   }
+  }
+}

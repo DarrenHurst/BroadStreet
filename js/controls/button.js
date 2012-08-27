@@ -19,7 +19,7 @@ define(['underscore', 'backbone','icons/icons'], function(_, Backbone,Icons) {
 	    setEvent: function(parent,method){
 	    	var that = this;
 	    	$('#'+this.cid+ '_Button').bind('click',function(){
-	    		this.trigger("click", that.execFN(method, parent, parent));
+	    		that.trigger("click", that.execFN(method, parent, parent));
 	    	})
 	    },
 	    setClass: function(name){

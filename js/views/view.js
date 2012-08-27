@@ -102,6 +102,7 @@ define(['jquery',
         	this.navbar.addButton("githubalt","GitHub",{"link":"https://github.com/DarrenHurst/BroadStreet"});
         	this.navbar.addButton("linkedin","LinkedIn",{"link":"http://ca.linkedin.com/pub/darren-hurst/23/299/149"});
      		this.navbar.addButton("twitter","Twitter",{"link":"https://twitter.com/ITS_A_NERD"});
+     		this.navbar.addButton("i","Read My Blog",{"link":"http://newdev.tumblr.com/"});
         },
         alertButton: function(e){
         	console.log(e);
