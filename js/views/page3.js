@@ -14,7 +14,7 @@ define(['jquery',
 		'controls/popup',
 		'icons/icons',
 		'models/twitter',
-		'controls/listview'
+		'controls/listView'
 ], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView,Popup,Icons,Twitter,listView){
 
     var View = Backbone.View.extend({
