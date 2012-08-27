@@ -9,7 +9,7 @@ define([
   		this.getData();
   	},
     url: function () {
-      return 'http://twitter.com/statuses/user_timeline/ITS_A_NERD.json'
+      return 'http://twitter.com/statuses/user_timeline/ITS_A_NERD.json?callback=?'
     },
     getData: function(){
     	var that = this;
