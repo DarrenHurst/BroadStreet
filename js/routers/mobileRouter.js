@@ -1,4 +1,4 @@
-define(['jquery','backbone','views/view'], function($, Backbone, MainView, AnotherView){
+define(['jquery','backbone','views/view', 'views/kitchensink/twitter/twitterApp'], function($, Backbone, MainView, TwitterView){
 
     var Router = Backbone.Router.extend({
 
@@ -6,14 +6,21 @@ define(['jquery','backbone','views/view'], function($, Backbone, MainView, Anoth
         
             // Tells Backbone to start watching for hashchange events
             Backbone.history.start();
+            
+          
 
+        },
+        config: function(){
+        	  //configuration
+         
         },
 
         // All of your Backbone Routes (add more)
         routes: {
 
             // When there is no hash bang on the url, the home method is called
-            '': 'home'
+            '': 'home',
+            'twitter':'twitter' //twitter kitchen sink
 
         },
 
@@ -24,8 +31,14 @@ define(['jquery','backbone','views/view'], function($, Backbone, MainView, Anoth
               
             // Renders the mainView template
             mainView.render();
+            
 
           
+        },
+        'twitter': function(){
+        	var twitter = new TwitterView();
+        	
+        	twitter.render();
         }
     });
 

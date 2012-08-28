@@ -13,9 +13,7 @@
   Note: IE6 works fine without this fix.
 */
 
-body {
-  min-width: 960px;
-}
+
 
 /* `Container
 ----------------------------------------------------------------------------------------------------*/
@@ -26,6 +24,18 @@ body {
   width: 960px;
 }
 
+.twitter-button {
+  font: 12px Arial, sans-serif;
+  color: #fff;
+  background: #1D6B9C url('http://twitter.com/images/oauth2/gradient-background.png') repeat-x;
+  text-indent: 0;
+  border: 1px solid #18566A;
+  display: inline-block;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -border-radius: 4px;
+  text-shadow: 0 -1px 0 #18566A;
+}
 /* `Grid >> Global
 ----------------------------------------------------------------------------------------------------*/
 

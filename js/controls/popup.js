@@ -41,7 +41,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 			  					 
 	},
 	setHeader: function(){
-		$('#'+this.cid+"_pop").append('<header><a class="button back black">back</a><h3>'+this.title+'</h3><a id="'+this.cid+'_buttonRight" class="button close black closeBtn">close</a></header>')
+		$('#'+this.cid+"_pop").append('<header><a id="'+this.cid+'_backbtn" class="button back black">back</a><h3>'+this.title+'</h3><a id="'+this.cid+'_buttonRight" class="button close black closeBtn">close</a></header>')
 	},
 	isControl: function(){
 		$('#'+this.cid+"_pop").append("<div id='"+this.cid+"_popdiv' class='popdiv'><div id='"+this.cid+"_popupControl' class='control'></div></div>");
@@ -55,6 +55,9 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 		var divHeight = $("#"+this.cid+"_popdiv").css("height");
 		$("#"+this.cid+"_popupControl").css({"height":divHeight - 10})
 	
+	},
+	hideLeftBtn: function(){
+		$("#"+this.cid+'_backbtn').css({"display":"none"});
 	},
 	bind: function(){
 		var that = this;
