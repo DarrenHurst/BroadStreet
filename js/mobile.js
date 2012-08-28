@@ -36,5 +36,12 @@ require.config({
 require(['modernizr','jquery','backbone','routers/mobileRouter','raphael'], function(Modernizr, $, Backbone, Mobile,Raphael) {
 
     // Instantiates a new Router
-    this.router = new Mobile();
+    
+       this.router = new Mobile();
+
+    
+
+
+
+
 });

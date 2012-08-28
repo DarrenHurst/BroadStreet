@@ -27,12 +27,14 @@ define(['jquery',
        
         // View constructor
         initialize: function() {
-
+            document.getElementsByTagName('BODY')[0].innerHTML = '';
             // Setting the view's model property to the passed in model
             this.model = new Model();
 
             // Setting the view's template property
             this.template = _.template( template, { model: this.model.toJSON() } );
+            
+            $('BODY').append('<div id="header"><a href="https://github.com/DarrenHurst/BroadStreet">BroadStreet</a></div>');
             
 
         },
@@ -96,12 +98,12 @@ define(['jquery',
         	
         	//  nav : nav to a new MainView or to a childView in Mainview scope"
         	//  link : nav to any other link
-        	this.navbar = new NavBar().render(this.app); // set the start location;
+        	this.navbar = new NavBar().render(this.app); 
+            this.navbar.addButton("twitter","Twitter Example",{"link":"#twitter"});//https://twitter.com/ITS_A_NERD// set the start location;
         	this.navbar.addButton("gear","page2 nav example",{"nav":this.page2});
         	this.navbar.addButton("video","page3 nav example",{"nav":this.page3});
         	this.navbar.addButton("githubalt","GitHub",{"link":"https://github.com/DarrenHurst/BroadStreet"});
         	this.navbar.addButton("linkedin","LinkedIn",{"link":"http://ca.linkedin.com/pub/darren-hurst/23/299/149"});
-     		this.navbar.addButton("twitter","Twitter",{"link":"https://twitter.com/ITS_A_NERD"});
      		this.navbar.addButton("i","Read My Blog",{"link":"http://newdev.tumblr.com/"});
         },
         alertButton: function(e){

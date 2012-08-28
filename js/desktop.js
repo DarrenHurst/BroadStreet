@@ -40,4 +40,6 @@ require(['modernizr','jquery','backbone','routers/desktopRouter','raphael'], fun
 
     // Instantiates a new Router
     this.router = new Desktop();
+    
+   
 });
