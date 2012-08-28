@@ -14,7 +14,6 @@ define([
     getData: function(){
     	var that = this;
       $.ajax({
-
       	url: that.url(),
     type: 'GET',
     crossDomain: true,
@@ -25,7 +24,7 @@ define([
         that.caller.buildTweets(that.twitterStream);},
     error: function() { alert('Failed!'); }
     });
-
+         
     },
  
     // Because twitter doesn't return an array of models by default we need
