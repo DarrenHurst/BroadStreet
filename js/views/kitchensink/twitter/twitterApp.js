@@ -16,7 +16,7 @@ define(['jquery',
 		'views/page3',
 		'controls/popup',
 		'models/twitter',
-		'controls/listview',
+		'controls/listView',
 		'controls/navigationController/navBarController',
 ], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView,Spinner,Page2,Page3,Popup,Twitter,listView,NavBar){
 
