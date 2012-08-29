@@ -1,18 +1,22 @@
 /* line 5, ../scss/transitions.scss */
 .bsm_page {
   width: 100%;
+  margin: 0 auto;
   margin-bottom: 60px;
   padding: 20px;
   display: inline-block;
+  z-index: 1;
 }
-/* line 12, ../scss/transitions.scss */
+/* line 13, ../scss/transitions.scss */
 .bsm_page .bsm_childpage {
+  margin: 0 auto;
   display: none;
   position: relative;
   width: 100%;
   height: 100%;
+  z-index: 2;
 }
-/* line 25, ../scss/transitions.scss */
+/* line 28, ../scss/transitions.scss */
 .bsm_page .flipped {
   display: block;
   transform: rotateY(180deg);
