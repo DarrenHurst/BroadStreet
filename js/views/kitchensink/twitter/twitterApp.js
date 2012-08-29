@@ -77,7 +77,7 @@ define(['jquery',
             this.Popup1.hideLeftBtn();
             var Popup_Control =  this.Popup1.isControl();
             this.Popup1.setPointer(25);
-            this.Popup1.setPosition(80,10);
+            this.Popup1.setPosition(180,10);
             //alert(Popup_Control);
             this.ScrollView1 = new ScrollView(Popup_Control,this).render();
             
