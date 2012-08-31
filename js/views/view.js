@@ -33,8 +33,9 @@ define(['jquery',
 
             // Setting the view's template property
             this.template = _.template( template, { model: this.model.toJSON() } );
-            
-            $('BODY').append('<div id="header"><a href="https://github.com/DarrenHurst/BroadStreet">BroadStreet</a></div>');
+            var fbiframe = '<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FBroadstreetMobile&amp;width=292&amp;height=62&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=false&amp;header=true&amp;appId=153402774797488" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:62px;" allowTransparency="true"></iframe>';
+           
+            $('BODY').append('<div id="header"><a href="https://github.com/DarrenHurst/BroadStreet">BroadStreet</a></div><div id="fb">'+fbiframe+'</div>');
             
 
         },

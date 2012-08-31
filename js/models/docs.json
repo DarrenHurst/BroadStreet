@@ -1,0 +1,31 @@
+
+[
+
+{
+"section":"Alert",
+"description":"IOS Style Alert Box",
+"usage":"new Alert().setAlert(msg)",
+"methods":[
+{
+"method":"setAlert",
+"description":""
+},
+{"method": "removeAlert",
+"description":""}]
+},
+
+{
+"section":"Alert",
+"description":"IOS Style Alert Box",
+"usage":"new Alert().setAlert(msg)",
+"methods":[
+{
+"method":"setAlert",
+"description":""
+},
+{"method": "removeAlert",
+"description":""}]
+}
+
+
+]
