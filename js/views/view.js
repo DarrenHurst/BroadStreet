@@ -37,7 +37,7 @@ define(['jquery',
             
             var fbiframe = '<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FBroadstreetMobile&amp;width=292&amp;height=62&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=false&amp;header=true&amp;appId=153402774797488" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:62px;" allowTransparency="true"></iframe>';
            
-            var googleplus = '<div class="g-plusone" data-annotation="inline" data-width="300"></div>'+
+            var googleplus = '<div class="g-plusone" data-annotation="none" data-width="300"></div>'+
 						"<script type='text/javascript'>(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script>";
             
             $('BODY').append('<div id="header"><a href="https://github.com/DarrenHurst/BroadStreet">BroadStreet</a></div><div id="fb">'+fbiframe+ googleplus+'</div>');
