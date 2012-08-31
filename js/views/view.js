@@ -40,7 +40,7 @@ define(['jquery',
             var googleplus = '<div class="g-plusone" data-annotation="none" data-width="300"></div>'+
 						"<script type='text/javascript'>(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script>";
             
-            $('BODY').append('<div id="header"><a href="https://github.com/DarrenHurst/BroadStreet">BroadStreet</a></div><div id="fb">'+fbiframe+ googleplus+'</div>');
+            $('BODY').append('<div id="header"><a href="https://github.com/DarrenHurst/BroadStreet">BroadStreet</a></div><div id="fb">'+fbiframe+'</div><div id="google">'+ googleplus+'</div>');
             
 
         },

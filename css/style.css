@@ -41,6 +41,12 @@ body { margin: 0; font-size: 1em; line-height: 1.4;}
 	top:5px;
 	right:40px;
 }
+#google{
+	float:right;
+	position:fixed;
+	top:5px;
+	right:40px;
+}
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
