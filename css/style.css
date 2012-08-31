@@ -38,7 +38,7 @@ body { margin: 0; font-size: 1em; line-height: 1.4; padding:10px;}
 #fb{
     float:right;
 	position:fixed;
-	top:-10px;
+	top:5px;
 	right:40px;
 }
 
