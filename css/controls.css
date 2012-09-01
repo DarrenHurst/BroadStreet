@@ -596,12 +596,112 @@ expanding_invisible {
   z-index: 1000;
 }
 
-/* line 466, ../scss/controls.scss */
+/* line 465, ../scss/controls.scss */
+.bsm_headerbar {
+  width: 100%;
+  display: block;
+  border-top: none;
+  position: relative;
+  right: 5px;
+  height: 40px;
+  padding: 0px 10px;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7d828c), color-stop(0.5, #303749), color-stop(0.5, #121a2e), to(#121a2e));
+  padding-left: 10px;
+  z-index: 5;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+}
+/* line 481, ../scss/controls.scss */
+.bsm_headerbar h3 {
+  margin: 0px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+/* line 492, ../scss/controls.scss */
+.bsm_headerbar .button {
+  color: #fff;
+  margin: 0 auto;
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  -webkit-border-radius: 5px;
+}
+/* line 502, ../scss/controls.scss */
+.bsm_headerbar .right {
+  margin-right: 15px;
+}
+/* line 506, ../scss/controls.scss */
+.bsm_headerbar .button.blue {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4286f5), to(#194fdb));
+  border: solid 1px rgba(25, 79, 219, 0.25);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+/* line 511, ../scss/controls.scss */
+.bsm_headerbar .button.blue:hover, .bsm_headerbar .button.blue.hover {
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5), inset 0px 0px 2px rgba(255, 255, 255, 0.25), inset 0px 0px 2px rgba(0, 0, 0, 0.25);
+  padding: 5px 9px 3px 11px;
+}
+/* line 515, ../scss/controls.scss */
+.bsm_headerbar .button.black {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7d828c), color-stop(0.5, #303749), color-stop(0.5, #121a2e), to(#121a2e));
+  border: solid 1px rgba(79, 79, 79, 0.75);
+}
+/* line 519, ../scss/controls.scss */
+.bsm_headerbar .button.black:hover, .bsm_headerbar .button.black:focus, .bsm_headerbar .button.black.hover {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#121a2e), color-stop(0.5, #121a2e), color-stop(0.5, black), to(black));
+  color: #fff;
+}
+/* line 525, ../scss/controls.scss */
+.bsm_headerbar .button {
+  margin-top: 6px;
+}
+/* line 528, ../scss/controls.scss */
+.bsm_headerbar .button.back {
+  position: relative;
+  left: 5px;
+  margin-right: 0px;
+}
+/* line 535, ../scss/controls.scss */
+.bsm_headerbar .back.black > .pointer {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7d828c), color-stop(0.5, #303749), color-stop(0.5, #121a2e), to(#121a2e));
+  border-left: solid 1px rgba(79, 79, 79, 0.75);
+  border: solid 1px rgba(79, 79, 79, 0.75);
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  height: 19px;
+  width: 19px;
+  -webkit-transform: rotate(45deg);
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, right top, from(black), color-stop(0.5, black), color-stop(0.5, transparent), to(transparent));
+  position: absolute;
+  left: -7px;
+  top: 1px;
+  -webkit-background-clip: content;
+}
+/* line 551, ../scss/controls.scss */
+.bsm_headerbar .back:hover .pointer, .bsm_headerbar .back.hover .pointer {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#4286f5), color-stop(0.5, #4286f5), color-stop(0.5, #194fdb), to(#194fdb));
+}
+/* line 554, ../scss/controls.scss */
+.bsm_headerbar .bsm_headerbarTitle {
+  -webkit-box-flex: 1;
+  position: relative;
+  right: 10px;
+}
+
+/* line 566, ../scss/controls.scss */
 menu {
   z-index: 1001;
   overflow: visible;
 }
-/* line 469, ../scss/controls.scss */
+/* line 569, ../scss/controls.scss */
 menu .pop {
   position: relative;
   border: solid 2px #6a6a6a;
@@ -617,7 +717,7 @@ menu .pop {
   -webkit-box-shadow: 0px 5px 10px #000;
   margin: 5px 5px 5px 5px !important;
 }
-/* line 489, ../scss/controls.scss */
+/* line 589, ../scss/controls.scss */
 menu .pop .menuHandle {
   position: absolute;
   top: -15px;
@@ -644,7 +744,7 @@ menu .pop .menuHandle {
   -moz-transform: rotate(45deg);
   /* Firefox */
 }
-/* line 512, ../scss/controls.scss */
+/* line 612, ../scss/controls.scss */
 menu .pop .menuHandleDown {
   position: absolute;
   bottom: -17px;
@@ -672,7 +772,7 @@ menu .pop .menuHandleDown {
   /* Firefox */
   -webkit-box-shadow: 0px 5px 10px #000;
 }
-/* line 536, ../scss/controls.scss */
+/* line 636, ../scss/controls.scss */
 menu .pop .popdiv {
   display: inline-block;
   position: relative;
@@ -682,16 +782,16 @@ menu .pop .popdiv {
   margin: 3px 3px 10px 3px !important;
   -webkit-border-radius: 5px;
 }
-/* line 547, ../scss/controls.scss */
+/* line 647, ../scss/controls.scss */
 menu .pop .popdiv .content {
   margin: 2px;
   height: 100%;
 }
-/* line 557, ../scss/controls.scss */
+/* line 657, ../scss/controls.scss */
 menu .pop .popdiv .control {
   overflow: hidden;
 }
-/* line 569, ../scss/controls.scss */
+/* line 669, ../scss/controls.scss */
 menu header {
   display: block;
   border-top: none;
@@ -706,7 +806,7 @@ menu header {
   -webkit-box-orient: horizontal;
   -webkit-box-align: stretch;
 }
-/* line 587, ../scss/controls.scss */
+/* line 687, ../scss/controls.scss */
 menu header h3 {
   margin: 0px;
   margin-bottom: 10px;
@@ -718,7 +818,7 @@ menu header h3 {
   text-align: center;
   font-weight: bold;
 }
-/* line 599, ../scss/controls.scss */
+/* line 699, ../scss/controls.scss */
 menu header .button {
   color: #fff;
   text-decoration: none;
@@ -729,36 +829,36 @@ menu header .button {
   margin: 0 auto;
   -webkit-border-radius: 5px;
 }
-/* line 610, ../scss/controls.scss */
+/* line 710, ../scss/controls.scss */
 menu header .button.blue {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4286f5), to(#194fdb));
   border: solid 1px rgba(25, 79, 219, 0.25);
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
 }
-/* line 615, ../scss/controls.scss */
+/* line 715, ../scss/controls.scss */
 menu header .button.blue:hover, menu header .button.blue.hover {
   -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5), inset 0px 0px 2px rgba(255, 255, 255, 0.25), inset 0px 0px 2px rgba(0, 0, 0, 0.25);
   padding: 5px 9px 3px 11px;
 }
-/* line 619, ../scss/controls.scss */
+/* line 719, ../scss/controls.scss */
 menu header .button.black {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7d828c), color-stop(0.5, #303749), color-stop(0.5, #121a2e), to(#121a2e));
   border: solid 1px rgba(79, 79, 79, 0.75);
 }
-/* line 623, ../scss/controls.scss */
+/* line 723, ../scss/controls.scss */
 menu header .button.black:hover, menu header .button.black:focus, menu header .button.black.hover {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#121a2e), color-stop(0.5, #121a2e), color-stop(0.5, black), to(black));
   color: #fff;
 }
-/* line 629, ../scss/controls.scss */
+/* line 729, ../scss/controls.scss */
 menu header .button {
   margin-top: 6px;
 }
-/* line 632, ../scss/controls.scss */
+/* line 732, ../scss/controls.scss */
 menu header .button.back {
   position: relative;
 }
-/* line 637, ../scss/controls.scss */
+/* line 737, ../scss/controls.scss */
 menu header .back.black > .pointer {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#7d828c), color-stop(0.5, #303749), color-stop(0.5, #121a2e), to(#121a2e));
   border-left: solid 1px rgba(79, 79, 79, 0.75);
@@ -775,12 +875,12 @@ menu header .back.black > .pointer {
   top: 1px;
   -webkit-background-clip: content;
 }
-/* line 653, ../scss/controls.scss */
+/* line 753, ../scss/controls.scss */
 menu header .back:hover .pointer, menu header .back.hover .pointer {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#4286f5), color-stop(0.5, #4286f5), color-stop(0.5, #194fdb), to(#194fdb));
 }
 
-/* line 660, ../scss/controls.scss */
+/* line 760, ../scss/controls.scss */
 .bsm_navbar {
   position: fixed;
   bottom: 0px;
@@ -795,16 +895,16 @@ menu header .back:hover .pointer, menu header .back.hover .pointer {
   -webkit-box-orient: horizontal;
   -webkit-box-align: stretch;
 }
-/* line 674, ../scss/controls.scss */
+/* line 774, ../scss/controls.scss */
 .bsm_navbar .nav_container {
   margin: 0 auto;
 }
-/* line 680, ../scss/controls.scss */
+/* line 780, ../scss/controls.scss */
 .bsm_navbar .nav_container .bsm_navButton:hover, .bsm_navbar .nav_container .bsm_navButton:focus, .bsm_navbar .nav_container .bsm_navButton.hover {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#121a2e), color-stop(0.5, #121a2e), color-stop(0.5, black), to(black));
   color: #fff;
 }
-/* line 686, ../scss/controls.scss */
+/* line 786, ../scss/controls.scss */
 .bsm_navbar .nav_container .bsm_navButton {
   height: 60px;
   padding: 2px;
@@ -815,7 +915,7 @@ menu header .back:hover .pointer, menu header .back.hover .pointer {
   background-image: -webkit-gradient(linear, from(#7d828c), color-stop(0.5, #303749), color-stop(0.5, #121a2e), to(#121a2e));
   margin: 0 auto;
 }
-/* line 696, ../scss/controls.scss */
+/* line 796, ../scss/controls.scss */
 .bsm_navbar .nav_container .bsm_navButton .icon {
   color: #fff;
   padding-left: 30px;
@@ -823,7 +923,7 @@ menu header .back:hover .pointer, menu header .back.hover .pointer {
   display: block;
   width: 60px;
 }
-/* line 706, ../scss/controls.scss */
+/* line 806, ../scss/controls.scss */
 .bsm_navbar .nav_container .bsm_navButton .text {
   opacity: 0.7;
   text-align: center;
@@ -834,7 +934,7 @@ menu header .back:hover .pointer, menu header .back.hover .pointer {
   margin: 0 auto;
 }
 
-/* line 720, ../scss/controls.scss */
+/* line 820, ../scss/controls.scss */
 .bsm_List .item {
   min-height: 70px;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #c7c7c7));
@@ -844,7 +944,7 @@ menu header .back:hover .pointer, menu header .back.hover .pointer {
   background: -ms-linear-gradient(top, #ffffff 0%, #c7c7c7 100%);
   background: linear-gradient(top, #ffffff 0%, #c7c7c7 100%);
 }
-/* line 723, ../scss/controls.scss */
+/* line 823, ../scss/controls.scss */
 .bsm_List .item .img {
   height: 100%;
   vertical-align: center;
@@ -854,7 +954,7 @@ menu header .back:hover .pointer, menu header .back.hover .pointer {
   margin-right: 5px;
   float: left;
 }
-/* line 732, ../scss/controls.scss */
+/* line 832, ../scss/controls.scss */
 .bsm_List .item .text {
   color: #232323;
   margin-left: 54px;

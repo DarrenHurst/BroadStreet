@@ -18,7 +18,8 @@ define(['jquery',
 		'models/twitter',
 		'controls/listView',
 		'controls/navigationController/navBarController',
-], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView,Spinner,Page2,Page3,Popup,Twitter,listView,NavBar){
+		'controls/navigationController/headerBarController',
+], function($, Backbone, Model, template,Label,Selection,Toggle,Input,Alert,ScrollView,Picture,Button,MainView,Spinner,Page2,Page3,Popup,Twitter,listView,NavBar,HeaderBar){
 
     var View = Backbone.View.extend({
 
@@ -77,7 +78,7 @@ define(['jquery',
             this.Popup1.hideLeftBtn();
             var Popup_Control =  this.Popup1.isControl();
             this.Popup1.setPointer(25);
-            this.Popup1.setPosition(180,10);
+            this.Popup1.setPosition(210,10);
             //alert(Popup_Control);
             this.ScrollView1 = new ScrollView(Popup_Control,this).render();
             
@@ -133,6 +134,11 @@ define(['jquery',
             //this.page1.flipIn();
             
             this.createControls();
+            
+            this.header = new HeaderBar().render();
+            this.header.setTitle("Twitter");
+            this.header.setRightNav("Next",this);
+            this.header.setLeftNav("Back",this);
             this.navBar();
 
         },
