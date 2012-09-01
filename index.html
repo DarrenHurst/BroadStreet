@@ -7,7 +7,8 @@
 	<!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-
+        <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+        <META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT">
 		<!-- Use the .htaccess and remove these lines to avoid edge case issues.
 		More info: h5bp.com/i/378 -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -22,8 +23,10 @@
 
 		<!-- Include your site specific stylesheets -->
 		<link rel="stylesheet" href="css/controls.css">
+		
+		<link rel="stylesheet" href="css/normalize.css">
 
-		<link rel="stylesheet" href="css/960.css">
+		<!--<link rel="stylesheet" href="css/960.css">-->
 
 		<link rel="stylesheet" href="css/style.css">
 		<!--Detect if the browser is a mobile browser or a desktop browser and conditionally include your JavaScript -->
@@ -65,14 +68,18 @@
 
 		<!-- Add Google Analytics script here -->
 
-	</body>
-</html>ort IE 6.
-		chromium.org/developers/how-tos/chrome-frame-getting-started -->
-		<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+<script type="text/javascript">
 
-		<!-- Add your site or application content here -->
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34494187-1']);
+  _gaq.push(['_trackPageview']);
 
-		<!-- Add Google Analytics script here -->
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
+</script>
 	</body>
 </html>

@@ -42,16 +42,11 @@ define(['underscore', 'backbone',
 			$(".bsm_navButton").css({"width":newWidth-7});
 			var that = this;
 			if (map.nav != undefined){
-				console.log(map.nav);
-				
+			
 				$("#"+this.cid+'_navButton'+this.buttonidx).bind("click",function(){
-				console.log(that.inView);
-				//that.inView.fadeOut();
 				that.inView.hideAll();
 				setTimeout(function(){map.nav.slideDown()},500);
-				
-				
-					});
+				});
 			}
 			if (map.link != undefined){
 				$("#"+this.cid+'_navButton'+this.buttonidx).bind("click",function(){

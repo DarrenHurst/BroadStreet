@@ -25,14 +25,8 @@ define(['underscore', 'backbone','icons/icons'], function(_, Backbone,Icons) {
 	    setClass: function(name){
 	    	$('#'+this.cid+ '_Button').addClass(name).removeClass("bsm_Button");
 	    },
-	    setClickState: function(){
-	    	
-	    },
-	    setHoverOnState: function(){
-	    	
-	    },
-	    setHoverOffState: function(){
-	    	
+	    setRaidus: function(radius){
+	    	$('#'+this.cid+ '_Button').css({"border-radius":radius})
 	    },
 	    getId:function(){
 	    	return this.cid +"_Button";
