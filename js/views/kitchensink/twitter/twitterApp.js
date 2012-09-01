@@ -137,8 +137,8 @@ define(['jquery',
             
             this.header = new HeaderBar().render();
             this.header.setTitle("Twitter");
-            this.header.setRightNav("Next",this);
-            this.header.setLeftNav("Back",this);
+            this.header.setRightNav("Repo",{"link":"https://github.com/DarrenHurst/BroadStreet"});
+            this.header.setLeftNav("Back",{"link":"#"});
             this.navBar();
 
         },
