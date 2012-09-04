@@ -118,8 +118,7 @@ define(['jquery',
         render: function() {
 
             //this.$el.find("#MainPage").append(this.template);
-            
-            
+             
             
             this.app = new MainView().render(this.$el.selector);
             
